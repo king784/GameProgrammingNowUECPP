@@ -1,7 +1,7 @@
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Definitions.GPN.h
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN\GPNGameModeBase.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\GPNGameModeBase.generated.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Definitions.GPN.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN\GPNGameModeBase.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\GPNGameModeBase.generated.h

@@ -8,6 +8,7 @@
 #include "GameFramework/Actor.h"
 #include "Components/BoxComponent.h"
 #include "ConstructorHelpers.h"
+#include "MyPlayerCharacter.h"
 #include "Pickup.generated.h"
 
 UCLASS()

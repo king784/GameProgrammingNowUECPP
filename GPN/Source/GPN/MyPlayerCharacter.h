@@ -39,6 +39,18 @@ public:
 	void Move_XAxis(float AxisValue);
 	void Move_YAxis(float AxisValue);
 
+	void RotCamRightInput();
+	void RotCamLeftInput();
+
+	void SetRotRight();
+	void SetRotLeft();
+	void UnsetRot();
+
 	// Input variables
 	FVector CurrentVelocity;
+
+private:
+	float CameraAngle = 0;
+	bool RotLeft = false;
+	bool RotRight = false;
 };

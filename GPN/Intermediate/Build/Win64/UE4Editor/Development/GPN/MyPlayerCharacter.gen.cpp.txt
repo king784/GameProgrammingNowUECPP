@@ -1,15 +1,15 @@
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Definitions.GPN.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN/MyPlayerCharacter.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\MyPlayerCharacter.generated.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Definitions.GPN.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN/MyPlayerCharacter.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\MyPlayerCharacter.generated.h

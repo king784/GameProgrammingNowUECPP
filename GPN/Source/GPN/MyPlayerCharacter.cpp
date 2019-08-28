@@ -58,6 +58,15 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 		}
 	}
 
+	if (RotRight)
+	{
+		RotCamRightInput();
+	}
+
+	if (RotLeft)
+	{
+		RotCamLeftInput();
+	}
 }
 
 // Called to bind functionality to input
@@ -68,8 +77,10 @@ void AMyPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 	// Respond every frame to the values of our two movement axes, "MoveX" and "MoveY".
 	PlayerInputComponent->BindAxis("MoveX", this, &AMyPlayerCharacter::Move_XAxis);
 	PlayerInputComponent->BindAxis("MoveY", this, &AMyPlayerCharacter::Move_YAxis);
-	// PlayerInputComponent->BindAction("RotateRight", this, &AMyPlayerCharacter::RotCamRightInput);
-	// PlayerInputComponent->BindAction("RotateLeft", this, &AMyPlayerCharacter::RotCamLeftInput);
+	 PlayerInputComponent->BindAction("RotateRight", IE_Pressed, this, &AMyPlayerCharacter::SetRotRight);
+	 PlayerInputComponent->BindAction("RotateLeft", IE_Pressed, this, &AMyPlayerCharacter::SetRotLeft);
+	 PlayerInputComponent->BindAction("RotateRight", IE_Released, this, &AMyPlayerCharacter::UnsetRot);
+	 PlayerInputComponent->BindAction("RotateLeft", IE_Released, this, &AMyPlayerCharacter::UnsetRot);
 }
 
 void AMyPlayerCharacter::Move_XAxis(float AxisValue)
@@ -82,4 +93,68 @@ void AMyPlayerCharacter::Move_YAxis(float AxisValue)
 {
 	// Move at 100 units per second right or left
 	CurrentVelocity.Y = FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f;
+}
+
+void AMyPlayerCharacter::RotCamRightInput()
+{
+	UE_LOG(LogTemp, Warning, TEXT("blee"));
+	FVector PlayerPos = MyMesh->GetComponentLocation();
+	FVector Radius = FVector(-700.0f, 0.0f, 250.0f);
+	CameraAngle++;
+	if (CameraAngle > 360.0f)
+	{
+		CameraAngle = 1;
+	}
+
+	FVector RotateValue = Radius.RotateAngleAxis(CameraAngle, FVector(0, 0, 1));
+
+	PlayerPos.X += RotateValue.X;
+	PlayerPos.Y += RotateValue.Y;
+	PlayerPos.Z += RotateValue.Z;
+
+	OurCamera->SetRelativeLocation(PlayerPos);
+
+	FRotator NewRotation = FRotator(0.0f, 1.0f, 0.0f);
+	FQuat QuatRotation = FQuat(NewRotation);
+	OurCamera->AddLocalRotation(QuatRotation);
+}
+
+void AMyPlayerCharacter::RotCamLeftInput()
+{
+	UE_LOG(LogTemp, Warning, TEXT("jee"));
+	FVector PlayerPos = MyMesh->GetComponentLocation();
+	FVector Radius = FVector(-700.0f, 0.0f, 250.0f);
+	CameraAngle--;
+	if (CameraAngle < 0.0f)
+	{
+		CameraAngle = 359.0f;
+	}
+
+	FVector RotateValue = Radius.RotateAngleAxis(CameraAngle, FVector(0, 0, 1));
+
+	PlayerPos.X += RotateValue.X;
+	PlayerPos.Y += RotateValue.Y;
+	PlayerPos.Z += RotateValue.Z;
+
+	OurCamera->SetRelativeLocation(PlayerPos);
+	
+	FRotator NewRotation = FRotator(0.0f, -1.0f, 0.0f);
+	FQuat QuatRotation = FQuat(NewRotation);
+	OurCamera->AddLocalRotation(QuatRotation);
+}
+
+void AMyPlayerCharacter::SetRotRight()
+{
+	RotRight = true;
+}
+
+void AMyPlayerCharacter::SetRotLeft()
+{
+	RotLeft = true;
+}
+
+void AMyPlayerCharacter::UnsetRot()
+{
+	RotRight = false;
+	RotLeft = false;
 }

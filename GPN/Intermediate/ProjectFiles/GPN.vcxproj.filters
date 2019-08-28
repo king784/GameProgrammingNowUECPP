@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GPN.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{71F3948A-7F11-49EC-B0B4-00D57BD2B0E9}</UniqueIdentifier>
+      <UniqueIdentifier>{5B55311C-60E5-49BB-A80F-47A07F03006F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GPN.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{12790C64-E20F-4966-B7D2-C58EE0ABD272}</UniqueIdentifier>
+      <UniqueIdentifier>{10222E25-9769-45DB-8B4A-C2DD2212F792}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,8 +23,11 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\GPN">
-      <UniqueIdentifier>{FD4D2B0D-E680-423B-B718-DDE94562D85C}</UniqueIdentifier>
+      <UniqueIdentifier>{449E9C1D-3ED7-4B4B-9BC4-79E9C6E724D9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GPN\GPN.Build.cs">
       <Filter>Source\GPN</Filter>
@@ -41,21 +44,17 @@
     <ClInclude Include="..\..\Source\GPN\GPNGameModeBase.h">
       <Filter>Source\GPN</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\GPN\MyPlayerCharacter.cpp">
+      <Filter>Source\GPN</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPN\MyPlayerCharacter.h">
+      <Filter>Source\GPN</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\GPN\Pickup.cpp">
       <Filter>Source\GPN</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GPN\Pickup.h">
       <Filter>Source\GPN</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\GPN\MyPlayerCharacter.h">
-      <Filter>Source\GPN</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\GPN\MyPlayerCharacter.cpp">
-      <Filter>Source\GPN</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
