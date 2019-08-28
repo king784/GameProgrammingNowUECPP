@@ -1,0 +1,20 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-GPN.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\teemu.turku\Documents\Unreal Projects\GPN\Intermediate\Build\Win64\GPNEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\teemu.turku\Documents\Unreal Projects\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\GPN.cpp.obj"
+"C:\Users\teemu.turku\Documents\Unreal Projects\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\GPNGameModeBase.cpp.obj"
+"C:\Users\teemu.turku\Documents\Unreal Projects\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\MyPlayerCharacter.cpp.obj"
+"C:\Users\teemu.turku\Documents\Unreal Projects\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Pickup.cpp.obj"
+"C:\Users\teemu.turku\Documents\Unreal Projects\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\GPN.init.gen.cpp.obj"
+"C:\Users\teemu.turku\Documents\Unreal Projects\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\GPNGameModeBase.gen.cpp.obj"
+"C:\Users\teemu.turku\Documents\Unreal Projects\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\MyPlayerCharacter.gen.cpp.obj"
+"C:\Users\teemu.turku\Documents\Unreal Projects\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Pickup.gen.cpp.obj"
+"C:\Users\teemu.turku\Documents\Unreal Projects\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Default.rc2.res"
+/OUT:"C:\Users\teemu.turku\Documents\Unreal Projects\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\UE4Editor-GPN.lib"
+/INCLUDE:IMPLEMENT_MODULE_GPN
