@@ -29,7 +29,7 @@ AMyPlayerCharacter::AMyPlayerCharacter()
 	// StaticMesh'/Engine/BasicShapes/Cube.Cube'
 
 	// Create a camera and a visible object
-	UCameraComponent* OurCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("OurCamera"));
+	OurCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("OurCamera"));
 	// Attach our camera and visible object to our root component. Offset and rotate the camera.
 	OurCamera->SetupAttachment(RootComponent);
 	OurCamera->SetRelativeLocation(FVector(-700.0f, 0.0f, 250.0f));
@@ -68,6 +68,8 @@ void AMyPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 	// Respond every frame to the values of our two movement axes, "MoveX" and "MoveY".
 	PlayerInputComponent->BindAxis("MoveX", this, &AMyPlayerCharacter::Move_XAxis);
 	PlayerInputComponent->BindAxis("MoveY", this, &AMyPlayerCharacter::Move_YAxis);
+	// PlayerInputComponent->BindAction("RotateRight", this, &AMyPlayerCharacter::RotCamRightInput);
+	// PlayerInputComponent->BindAction("RotateLeft", this, &AMyPlayerCharacter::RotCamLeftInput);
 }
 
 void AMyPlayerCharacter::Move_XAxis(float AxisValue)
