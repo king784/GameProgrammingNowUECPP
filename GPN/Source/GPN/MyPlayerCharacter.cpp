@@ -24,6 +24,7 @@ AMyPlayerCharacter::AMyPlayerCharacter()
 		{
 			UStaticMesh* TheMeshAsset = StaticMeshAsset.Object;
 			MyMesh->SetStaticMesh(TheMeshAsset);
+			MyMesh->OnComponentBeginOverlap.AddDynamic(this, &AMyPlayerCharacter::OnOverlapBegin);
 		}
 
 	// StaticMesh'/Engine/BasicShapes/Cube.Cube'
@@ -35,6 +36,20 @@ AMyPlayerCharacter::AMyPlayerCharacter()
 	OurCamera->SetRelativeLocation(FVector(-700.0f, 0.0f, 250.0f));
 	OurCamera->SetRelativeRotation(FRotator(-20.0f, 0.0f, 0.0f));
 
+}
+
+void AMyPlayerCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	FString OtherName = OtherActor->GetName();
+	FString PlayerName = "MyPlayerCharacter_0";
+
+	std::string OtherNameStr = std::string(TCHAR_TO_UTF8(*OtherName));
+
+	if (OtherName.Contains("LightSwitch"))
+	{
+		CanInteract = true;
+	}
+	// Check if implements:  if(UKismetSystemLibrary::DoesImplementInterface(OtherActor,))
 }
 
 // Called when the game starts or when spawned
@@ -99,7 +114,8 @@ void AMyPlayerCharacter::RotCamRightInput()
 {
 	UE_LOG(LogTemp, Warning, TEXT("blee"));
 	FVector PlayerPos = MyMesh->GetComponentLocation();
-	FVector Radius = FVector(-700.0f, 0.0f, 250.0f);
+	FVector Radius = OurCamera->GetComponentLocation(); // FVector(-700.0f, 0.0f, 250.0f);
+	//PlayerPos
 	CameraAngle++;
 	if (CameraAngle > 360.0f)
 	{

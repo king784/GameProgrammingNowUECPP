@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GPN.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{5B55311C-60E5-49BB-A80F-47A07F03006F}</UniqueIdentifier>
+      <UniqueIdentifier>{BC66F739-DB0F-48A7-9239-403434D7B9F1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GPN.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{10222E25-9769-45DB-8B4A-C2DD2212F792}</UniqueIdentifier>
+      <UniqueIdentifier>{57963443-7E6C-4DCC-A788-82962DF91345}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GPN">
-      <UniqueIdentifier>{449E9C1D-3ED7-4B4B-9BC4-79E9C6E724D9}</UniqueIdentifier>
+      <UniqueIdentifier>{C7B5048F-3B29-4D31-A7BF-CAD23E6096A5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GPN\GPN.Build.cs">
       <Filter>Source\GPN</Filter>
@@ -56,5 +56,15 @@
     <ClInclude Include="..\..\Source\GPN\Pickup.h">
       <Filter>Source\GPN</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\GPN\SpawnVolume.h">
+      <Filter>Source\GPN</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\GPN\SpawnVolume.cpp">
+      <Filter>Source\GPN</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

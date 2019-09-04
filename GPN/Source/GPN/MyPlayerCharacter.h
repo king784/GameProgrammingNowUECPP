@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include <string>
+
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Camera/CameraComponent.h"
@@ -28,6 +30,9 @@ public:
 
 	UCameraComponent* OurCamera;
 
+	UFUNCTION()
+	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
 	// Mesh
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UStaticMeshComponent* MyMesh;
@@ -53,4 +58,5 @@ private:
 	float CameraAngle = 0;
 	bool RotLeft = false;
 	bool RotRight = false;
+	bool CanInteract = false;
 };
