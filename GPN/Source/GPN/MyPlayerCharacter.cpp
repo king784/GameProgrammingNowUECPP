@@ -2,6 +2,7 @@
 
 
 #include "MyPlayerCharacter.h"
+#include "InteractInterface.h"
 
 // Sets default values
 AMyPlayerCharacter::AMyPlayerCharacter()
@@ -25,6 +26,7 @@ AMyPlayerCharacter::AMyPlayerCharacter()
 			UStaticMesh* TheMeshAsset = StaticMeshAsset.Object;
 			MyMesh->SetStaticMesh(TheMeshAsset);
 			MyMesh->OnComponentBeginOverlap.AddDynamic(this, &AMyPlayerCharacter::OnOverlapBegin);
+			MyMesh->OnComponentEndOverlap.AddDynamic(this, &AMyPlayerCharacter::OnOverlapEnd);
 		}
 
 	// StaticMesh'/Engine/BasicShapes/Cube.Cube'
@@ -48,6 +50,22 @@ void AMyPlayerCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AAc
 	if (OtherName.Contains("LightSwitch"))
 	{
 		CanInteract = true;
+		InteractTarget = OtherActor;
+	}
+	// Check if implements:  if(UKismetSystemLibrary::DoesImplementInterface(OtherActor,))
+}
+
+void AMyPlayerCharacter::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	FString OtherName = OtherActor->GetName();
+	FString PlayerName = "MyPlayerCharacter_0";
+
+	std::string OtherNameStr = std::string(TCHAR_TO_UTF8(*OtherName));
+
+	if (OtherName.Contains("LightSwitch"))
+	{
+		CanInteract = false;
+		InteractTarget = NULL;
 	}
 	// Check if implements:  if(UKismetSystemLibrary::DoesImplementInterface(OtherActor,))
 }
@@ -92,10 +110,21 @@ void AMyPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 	// Respond every frame to the values of our two movement axes, "MoveX" and "MoveY".
 	PlayerInputComponent->BindAxis("MoveX", this, &AMyPlayerCharacter::Move_XAxis);
 	PlayerInputComponent->BindAxis("MoveY", this, &AMyPlayerCharacter::Move_YAxis);
+
 	 PlayerInputComponent->BindAction("RotateRight", IE_Pressed, this, &AMyPlayerCharacter::SetRotRight);
 	 PlayerInputComponent->BindAction("RotateLeft", IE_Pressed, this, &AMyPlayerCharacter::SetRotLeft);
 	 PlayerInputComponent->BindAction("RotateRight", IE_Released, this, &AMyPlayerCharacter::UnsetRot);
 	 PlayerInputComponent->BindAction("RotateLeft", IE_Released, this, &AMyPlayerCharacter::UnsetRot);
+
+	 PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &AMyPlayerCharacter::Interact);
+}
+
+void AMyPlayerCharacter::Interact()
+{
+	if (CanInteract)
+	{
+		IInteractInterface::Execute_Interact(InteractTarget);
+	}
 }
 
 void AMyPlayerCharacter::Move_XAxis(float AxisValue)
@@ -115,7 +144,9 @@ void AMyPlayerCharacter::RotCamRightInput()
 	UE_LOG(LogTemp, Warning, TEXT("blee"));
 	FVector PlayerPos = MyMesh->GetComponentLocation();
 	FVector Radius = OurCamera->GetComponentLocation(); // FVector(-700.0f, 0.0f, 250.0f);
-	//PlayerPos
+	
+	PlayerPos.Y = Radius.Y;
+	
 	CameraAngle++;
 	if (CameraAngle > 360.0f)
 	{
@@ -150,10 +181,11 @@ void AMyPlayerCharacter::RotCamLeftInput()
 
 	PlayerPos.X += RotateValue.X;
 	PlayerPos.Y += RotateValue.Y;
-	PlayerPos.Z += RotateValue.Z;
+	//PlayerPos.Z += RotateValue.Z;
+	PlayerPos.Z = Radius.Z;
 
 	OurCamera->SetRelativeLocation(PlayerPos);
-	
+
 	FRotator NewRotation = FRotator(0.0f, -1.0f, 0.0f);
 	FQuat QuatRotation = FQuat(NewRotation);
 	OurCamera->AddLocalRotation(QuatRotation);

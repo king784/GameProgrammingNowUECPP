@@ -61,9 +61,21 @@
     <ClInclude Include="..\..\Source\GPN\SpawnVolume.h">
       <Filter>Source\GPN</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GPN\InteractInterface.h">
+      <Filter>Source\GPN</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GPN\LightSwitch.h">
+      <Filter>Source\GPN</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\GPN\SpawnVolume.cpp">
+      <Filter>Source\GPN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GPN\InteractInterface.cpp">
+      <Filter>Source\GPN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GPN\LightSwitch.cpp">
       <Filter>Source\GPN</Filter>
     </ClCompile>
   </ItemGroup>

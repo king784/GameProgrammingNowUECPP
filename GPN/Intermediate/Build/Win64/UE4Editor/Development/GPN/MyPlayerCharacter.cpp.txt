@@ -26,3 +26,5 @@ C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Compone
 C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
 C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\MyPlayerCharacter.generated.h
+C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN\InteractInterface.h
+C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\InteractInterface.generated.h

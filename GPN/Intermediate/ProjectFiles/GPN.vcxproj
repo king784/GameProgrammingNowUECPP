@@ -364,7 +364,11 @@
     <NMakeOutput>..\..\Binaries\HTML5\GPN-HTML5-Shipping.js</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\GPN\InteractInterface.cpp" />
+    <ClCompile Include="..\..\Source\GPN\LightSwitch.cpp" />
     <ClCompile Include="..\..\Source\GPN\SpawnVolume.cpp" />
+    <ClInclude Include="..\..\Source\GPN\InteractInterface.h" />
+    <ClInclude Include="..\..\Source\GPN\LightSwitch.h" />
     <ClInclude Include="..\..\Source\GPN\SpawnVolume.h" />
     <None Include="..\..\GPN.uproject" />
     <None Include="..\..\Source\GPN.Target.cs" />
