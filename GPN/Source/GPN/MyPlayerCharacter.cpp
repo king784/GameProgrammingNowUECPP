@@ -3,6 +3,7 @@
 
 #include "MyPlayerCharacter.h"
 #include "InteractInterface.h"
+#include "LightSwitch.h"
 
 // Sets default values
 AMyPlayerCharacter::AMyPlayerCharacter()
@@ -51,6 +52,8 @@ void AMyPlayerCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AAc
 	{
 		CanInteract = true;
 		InteractTarget = OtherActor;
+		ALightSwitch* theSwitch = Cast<ALightSwitch>(OtherActor);
+		theSwitch->ToggleInfo();
 	}
 	// Check if implements:  if(UKismetSystemLibrary::DoesImplementInterface(OtherActor,))
 }
@@ -66,6 +69,8 @@ void AMyPlayerCharacter::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp,
 	{
 		CanInteract = false;
 		InteractTarget = NULL;
+		ALightSwitch* theSwitch = Cast<ALightSwitch>(OtherActor);
+		theSwitch->ToggleInfo();
 	}
 	// Check if implements:  if(UKismetSystemLibrary::DoesImplementInterface(OtherActor,))
 }

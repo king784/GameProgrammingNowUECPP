@@ -18,6 +18,8 @@ void EmptyLinkFunctionForGeneratedCodeLightSwitch() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_GPN();
 	GPN_API UFunction* Z_Construct_UFunction_ALightSwitch_Interact();
+	GPN_API UFunction* Z_Construct_UFunction_ALightSwitch_ToggleInfo();
+	ENGINE_API UClass* Z_Construct_UClass_UTextRenderComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
@@ -34,6 +36,7 @@ void EmptyLinkFunctionForGeneratedCodeLightSwitch() {}
 		UClass* Class = ALightSwitch::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "Interact", &ALightSwitch::execInteract },
+			{ "ToggleInfo", &ALightSwitch::execToggleInfo },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
 	}
@@ -60,6 +63,28 @@ void EmptyLinkFunctionForGeneratedCodeLightSwitch() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ALightSwitch_ToggleInfo_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALightSwitch_ToggleInfo_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "LightSwitch.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALightSwitch_ToggleInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALightSwitch, nullptr, "ToggleInfo", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALightSwitch_ToggleInfo_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_ALightSwitch_ToggleInfo_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ALightSwitch_ToggleInfo()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALightSwitch_ToggleInfo_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ALightSwitch_NoRegister()
 	{
 		return ALightSwitch::StaticClass();
@@ -71,6 +96,10 @@ void EmptyLinkFunctionForGeneratedCodeLightSwitch() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InfoText_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InfoText;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BoxCollision_MetaData[];
 #endif
@@ -99,6 +128,7 @@ void EmptyLinkFunctionForGeneratedCodeLightSwitch() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ALightSwitch_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ALightSwitch_Interact, "Interact" }, // 1472909546
+		{ &Z_Construct_UFunction_ALightSwitch_ToggleInfo, "ToggleInfo" }, // 604567581
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALightSwitch_Statics::Class_MetaDataParams[] = {
@@ -106,6 +136,14 @@ void EmptyLinkFunctionForGeneratedCodeLightSwitch() {}
 		{ "ModuleRelativePath", "LightSwitch.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALightSwitch_Statics::NewProp_InfoText_MetaData[] = {
+		{ "Category", "LightSwitch" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "LightSwitch.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALightSwitch_Statics::NewProp_InfoText = { "InfoText", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALightSwitch, InfoText), Z_Construct_UClass_UTextRenderComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ALightSwitch_Statics::NewProp_InfoText_MetaData, ARRAY_COUNT(Z_Construct_UClass_ALightSwitch_Statics::NewProp_InfoText_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALightSwitch_Statics::NewProp_BoxCollision_MetaData[] = {
 		{ "Category", "LightSwitch" },
@@ -138,6 +176,7 @@ void EmptyLinkFunctionForGeneratedCodeLightSwitch() {}
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ALightSwitch_Statics::NewProp_Lights = { "Lights", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALightSwitch, Lights), METADATA_PARAMS(Z_Construct_UClass_ALightSwitch_Statics::NewProp_Lights_MetaData, ARRAY_COUNT(Z_Construct_UClass_ALightSwitch_Statics::NewProp_Lights_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALightSwitch_Statics::NewProp_Lights_Inner = { "Lights", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALightSwitch_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALightSwitch_Statics::NewProp_InfoText,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALightSwitch_Statics::NewProp_BoxCollision,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALightSwitch_Statics::NewProp_Mesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALightSwitch_Statics::NewProp_Root,
@@ -174,7 +213,7 @@ void EmptyLinkFunctionForGeneratedCodeLightSwitch() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ALightSwitch, 4205030465);
+	IMPLEMENT_CLASS(ALightSwitch, 3868951073);
 	template<> GPN_API UClass* StaticClass<ALightSwitch>()
 	{
 		return ALightSwitch::StaticClass();

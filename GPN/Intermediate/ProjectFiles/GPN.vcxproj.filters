@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GPN.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{BC66F739-DB0F-48A7-9239-403434D7B9F1}</UniqueIdentifier>
+      <UniqueIdentifier>{3CFD6FD6-6125-4960-A646-2B07434DD4BE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GPN.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{57963443-7E6C-4DCC-A788-82962DF91345}</UniqueIdentifier>
+      <UniqueIdentifier>{099A09A8-E787-43A0-93F2-45607307D4BA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GPN">
-      <UniqueIdentifier>{C7B5048F-3B29-4D31-A7BF-CAD23E6096A5}</UniqueIdentifier>
+      <UniqueIdentifier>{7BA11F9F-9A6F-4B75-982E-9FB593B0B36E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GPN\GPN.Build.cs">
       <Filter>Source\GPN</Filter>
@@ -44,6 +44,18 @@
     <ClInclude Include="..\..\Source\GPN\GPNGameModeBase.h">
       <Filter>Source\GPN</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\GPN\InteractInterface.cpp">
+      <Filter>Source\GPN</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPN\InteractInterface.h">
+      <Filter>Source\GPN</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GPN\LightSwitch.cpp">
+      <Filter>Source\GPN</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPN\LightSwitch.h">
+      <Filter>Source\GPN</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\GPN\MyPlayerCharacter.cpp">
       <Filter>Source\GPN</Filter>
     </ClCompile>
@@ -56,27 +68,11 @@
     <ClInclude Include="..\..\Source\GPN\Pickup.h">
       <Filter>Source\GPN</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\GPN\SpawnVolume.h">
-      <Filter>Source\GPN</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\GPN\InteractInterface.h">
-      <Filter>Source\GPN</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\GPN\LightSwitch.h">
-      <Filter>Source\GPN</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\..\Source\GPN\SpawnVolume.cpp">
       <Filter>Source\GPN</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\GPN\InteractInterface.cpp">
+    <ClInclude Include="..\..\Source\GPN\SpawnVolume.h">
       <Filter>Source\GPN</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\GPN\LightSwitch.cpp">
-      <Filter>Source\GPN</Filter>
-    </ClCompile>
+    </ClInclude>
   </ItemGroup>
 </Project>

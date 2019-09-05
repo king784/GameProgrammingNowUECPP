@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "InteractInterface.h"
 #include "Components/BoxComponent.h"
+#include "Components/TextRenderComponent.h"
 #include "LightSwitch.generated.h"
 
 UCLASS()
@@ -24,6 +25,9 @@ public:
 		void Interact();
 	virtual void Interact_Implementation() override;
 
+	UFUNCTION(BlueprintCallable)
+		void ToggleInfo();
+
 	UPROPERTY()
 		USceneComponent* Root;
 
@@ -33,7 +37,10 @@ public:
 	UPROPERTY(VisibleAnywhere)
 		UBoxComponent* BoxCollision;
 
+	UPROPERTY(VisibleAnywhere)
+		UTextRenderComponent* InfoText;
+
 private:
 	bool LightsOn = true;
-
+	bool InfoIsOn = false;
 };
