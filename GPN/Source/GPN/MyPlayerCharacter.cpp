@@ -18,9 +18,14 @@ AMyPlayerCharacter::AMyPlayerCharacter()
 	RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
 
 	// Create player mesh
-	MyMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+	MyMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
 	MyMesh->AttachTo(RootComponent);
-	auto StaticMeshAsset = ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Cube.Cube'"));
+	MyMesh->SetRelativeScale3D(FVector(6.0, 6.0, 6.0));
+	MyMesh->SetRelativeRotation(FRotator(0.0f, -90.0f, 0.0f));
+
+	/*MyMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+	MyMesh->AttachTo(RootComponent);*/
+	/*auto StaticMeshAsset = ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Cube.Cube'"));
 
 		if (StaticMeshAsset.Succeeded())
 		{
@@ -28,7 +33,7 @@ AMyPlayerCharacter::AMyPlayerCharacter()
 			MyMesh->SetStaticMesh(TheMeshAsset);
 			MyMesh->OnComponentBeginOverlap.AddDynamic(this, &AMyPlayerCharacter::OnOverlapBegin);
 			MyMesh->OnComponentEndOverlap.AddDynamic(this, &AMyPlayerCharacter::OnOverlapEnd);
-		}
+		}*/
 
 	// StaticMesh'/Engine/BasicShapes/Cube.Cube'
 
@@ -36,7 +41,7 @@ AMyPlayerCharacter::AMyPlayerCharacter()
 	OurCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("OurCamera"));
 	// Attach our camera and visible object to our root component. Offset and rotate the camera.
 	OurCamera->SetupAttachment(RootComponent);
-	OurCamera->SetRelativeLocation(FVector(-700.0f, 0.0f, 250.0f));
+	OurCamera->SetRelativeLocation(FVector(-700.0f, 0.0f, 450.0f));
 	OurCamera->SetRelativeRotation(FRotator(-20.0f, 0.0f, 0.0f));
 
 }
@@ -88,13 +93,12 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	// Handle movement based on our "MoveX" and "MoveY" axes
+	if (!CurrentVelocity.IsZero())
 	{
-		if (!CurrentVelocity.IsZero())
-		{
-			FVector NewLocation = GetActorLocation() + (CurrentVelocity * DeltaTime);
-			SetActorLocation(NewLocation);
-		}
+		FVector NewLocation = GetActorLocation() + (CurrentVelocity * DeltaTime);
+		SetActorLocation(NewLocation);
 	}
+	
 
 	if (RotRight)
 	{
@@ -135,12 +139,14 @@ void AMyPlayerCharacter::Interact()
 void AMyPlayerCharacter::Move_XAxis(float AxisValue)
 {
 	// Move at 100 units per second forward or backward
-	CurrentVelocity.X = FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f;
+	 AddMovementInput(GetActorForwardVector(), FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f);
+	 CurrentVelocity.X = FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f;
 }
 
 void AMyPlayerCharacter::Move_YAxis(float AxisValue)
 {
 	// Move at 100 units per second right or left
+	AddMovementInput(GetActorRightVector(), FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f);
 	CurrentVelocity.Y = FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f;
 }
 

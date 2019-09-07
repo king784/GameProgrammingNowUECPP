@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeGPN_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xBB3E3F2B,
+				0x4C705F30,
 				0x80A94E42,
 				METADATA_PARAMS(nullptr, 0)
 			};
