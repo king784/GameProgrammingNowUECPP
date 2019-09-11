@@ -76,6 +76,7 @@ void APickup::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherA
 
 	if (PlayerName == OtherName)
 	{
+
 		Destroy();
 	}
 }

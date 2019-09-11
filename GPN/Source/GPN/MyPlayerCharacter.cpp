@@ -57,7 +57,6 @@ AMyPlayerCharacter::AMyPlayerCharacter(const FObjectInitializer& ObjectInitializ
 	OurCamera->SetRelativeLocation(FVector(-700.0f, 0.0f, 450.0f));
 	OurCamera->SetRelativeRotation(FRotator(-20.0f, 0.0f, 0.0f));
 	CameraOffset = FVector(MyMesh->GetComponentLocation().X - 700.0f, MyMesh->GetComponentLocation().Y, MyMesh->GetComponentLocation().Z + 450.0f);
-
 }
 
 void AMyPlayerCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -98,7 +97,15 @@ void AMyPlayerCharacter::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp,
 void AMyPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	SetRotLeft();
+	// Set camera to default pos
+	FRotator rot(0.0f, CameraAngle, 0.0f);
+	CameraOffset = rot.RotateVector(CameraOffset);
+
+	OurCamera->SetRelativeLocation(CameraOffset);
+
+	FRotator Rot = FRotationMatrix::MakeFromX(OurCamera->GetComponentLocation() - MyMesh->GetComponentLocation()).Rotator();
+	Rot.Pitch = -9.0f;
+	OurCamera->SetRelativeRotation(Rot);
 }
 
 // Called every frame
