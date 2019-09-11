@@ -1,36 +1,36 @@
-D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Definitions.GPN.h
-D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN\SpawnVolume.h
-D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\SpawnVolume.generated.h
-D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes/Components/BoxComponent.h
-D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
-D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
-D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
-D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Kismet/KismetMathLibrary.h
-D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Core\Public\Misc/QualifiedFrameTime.h
-D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetMathLibrary.generated.h
-D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Kismet\KismetMathLibrary.inl
-D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN\Pickup.h
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\string
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\xstring
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\iosfwd
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\cstdio
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\cstring
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\cwchar
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\xmemory0
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\cstdint
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\limits
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\cfloat
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\climits
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\xutility
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\utility
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\xatomic0.h
-D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\cctype
-D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN\MyPlayerCharacter.h
-D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
-D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
-D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
-D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
-D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
-D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\MyPlayerCharacter.generated.h
-D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\Pickup.generated.h
+C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Definitions.GPN.h
+C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN\SpawnVolume.h
+C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\SpawnVolume.generated.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes/Components/BoxComponent.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Kismet/KismetMathLibrary.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Core\Public\Misc/QualifiedFrameTime.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetMathLibrary.generated.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Kismet\KismetMathLibrary.inl
+C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN\Pickup.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\string
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\xstring
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\iosfwd
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\cstdio
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\cstring
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\cwchar
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\xmemory
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\cstdint
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\limits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\cfloat
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\climits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\xatomic.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\xutility
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\utility
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\INCLUDE\cctype
+C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN\MyPlayerCharacter.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
+C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\MyPlayerCharacter.generated.h
+C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\Pickup.generated.h

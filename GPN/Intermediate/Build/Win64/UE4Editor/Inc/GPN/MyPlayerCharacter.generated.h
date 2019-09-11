@@ -94,7 +94,7 @@ public: \
 
 #define GPN_Source_GPN_MyPlayerCharacter_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AMyPlayerCharacter(const FObjectInitializer& ObjectInitializer); \
+	NO_API AMyPlayerCharacter(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMyPlayerCharacter) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AMyPlayerCharacter); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyPlayerCharacter); \
@@ -113,7 +113,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AMyPlayerCharacter); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyPlayerCharacter); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMyPlayerCharacter)
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMyPlayerCharacter)
 
 
 #define GPN_Source_GPN_MyPlayerCharacter_h_17_PRIVATE_PROPERTY_OFFSET

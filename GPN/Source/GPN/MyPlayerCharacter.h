@@ -18,7 +18,7 @@ class GPN_API AMyPlayerCharacter : public ACharacter
 
 public:
 	// Sets default values for this character's properties
-	AMyPlayerCharacter();
+	AMyPlayerCharacter(const FObjectInitializer& ObjectInitializer);
 
 protected:
 	// Called when the game starts or when spawned
@@ -40,8 +40,16 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	USkeletalMeshComponent* MyMesh;
 
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* BoxCollision;
+
+	UPROPERTY(VisibleAnywhere)
+	bool isInAir;
+
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	void UpdateBatteryCharge(float newCharge);
 
 	// Input functions
 	void Move_XAxis(float AxisValue);
@@ -54,6 +62,8 @@ public:
 	void SetRotLeft();
 	void UnsetRot();
 
+	void DoJump();
+
 	void Interact();
 	AActor* InteractTarget;
 
@@ -61,8 +71,10 @@ public:
 	FVector CurrentVelocity;
 
 private:
-	float CameraAngle = 0;
+	FVector CameraOffset;
+	float CameraAngle = 1.0f;
 	bool RotLeft = false;
 	bool RotRight = false;
 	bool CanInteract = false;
+	float batteryCharge = 1.0f;
 };

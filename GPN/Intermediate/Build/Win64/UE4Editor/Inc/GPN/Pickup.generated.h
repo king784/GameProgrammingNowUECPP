@@ -17,6 +17,7 @@ struct FHitResult;
 #define GPN_Pickup_generated_h
 
 #define GPN_Source_GPN_Pickup_h_17_RPC_WRAPPERS \
+	virtual void OnPickup_Implementation(); \
  \
 	DECLARE_FUNCTION(execSetActive) \
 	{ \
@@ -46,11 +47,20 @@ struct FHitResult;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->OnOverlapBegin(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execOnPickup) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnPickup_Implementation(); \
 		P_NATIVE_END; \
 	}
 
 
 #define GPN_Source_GPN_Pickup_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void OnPickup_Implementation(); \
  \
 	DECLARE_FUNCTION(execSetActive) \
 	{ \
@@ -81,9 +91,19 @@ struct FHitResult;
 		P_NATIVE_BEGIN; \
 		P_THIS->OnOverlapBegin(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult); \
 		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execOnPickup) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnPickup_Implementation(); \
+		P_NATIVE_END; \
 	}
 
 
+#define GPN_Source_GPN_Pickup_h_17_EVENT_PARMS
+#define GPN_Source_GPN_Pickup_h_17_CALLBACK_WRAPPERS
 #define GPN_Source_GPN_Pickup_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPickup(); \
@@ -132,12 +152,16 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APickup); \
 	FORCEINLINE static uint32 __PPO__BoxCollision() { return STRUCT_OFFSET(APickup, BoxCollision); }
 
 
-#define GPN_Source_GPN_Pickup_h_14_PROLOG
+#define GPN_Source_GPN_Pickup_h_14_PROLOG \
+	GPN_Source_GPN_Pickup_h_17_EVENT_PARMS
+
+
 #define GPN_Source_GPN_Pickup_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	GPN_Source_GPN_Pickup_h_17_PRIVATE_PROPERTY_OFFSET \
 	GPN_Source_GPN_Pickup_h_17_RPC_WRAPPERS \
+	GPN_Source_GPN_Pickup_h_17_CALLBACK_WRAPPERS \
 	GPN_Source_GPN_Pickup_h_17_INCLASS \
 	GPN_Source_GPN_Pickup_h_17_STANDARD_CONSTRUCTORS \
 public: \
@@ -149,6 +173,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	GPN_Source_GPN_Pickup_h_17_PRIVATE_PROPERTY_OFFSET \
 	GPN_Source_GPN_Pickup_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	GPN_Source_GPN_Pickup_h_17_CALLBACK_WRAPPERS \
 	GPN_Source_GPN_Pickup_h_17_INCLASS_NO_PURE_DECLS \
 	GPN_Source_GPN_Pickup_h_17_ENHANCED_CONSTRUCTORS \
 private: \

@@ -24,7 +24,7 @@ ALightSwitch::ALightSwitch()
 
 	InfoText = CreateDefaultSubobject<UTextRenderComponent>(TEXT("InfoText"));
 	InfoText->AttachTo(Root);
-	InfoText->SetText(TEXT("Press space to interact"));
+	InfoText->SetText(TEXT("Press F to interact"));
 	InfoText->SetWorldSize(50.0f);
 	InfoText->SetRelativeLocation(FVector(0.0, 100.0, 0.0));
 	InfoText->SetVisibility(false);

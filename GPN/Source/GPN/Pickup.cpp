@@ -67,17 +67,22 @@ void APickup::Tick(float DeltaTime)
 void APickup::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	FString OtherName = OtherActor->GetName();
-	FString PlayerName = "MyPlayerCharacter_0";
+	FString PlayerName = "MyPlayerCharacter_1";
 
-	// std::string OtherNameStr = std::string(TCHAR_TO_UTF8(*OtherName));
-	// std::string PlayerNameStr = std::string(TCHAR_TO_UTF8(*PlayerName));
-	// UE_LOG(LogTemp, Warning, TEXT("%s"), *FString(OtherNameStr.c_str()));
-	// UE_LOG(LogTemp, Warning, TEXT("%s"), *FString(PlayerNameStr.c_str()));
+	 /*std::string OtherNameStr = std::string(TCHAR_TO_UTF8(*OtherName));
+	 std::string PlayerNameStr = std::string(TCHAR_TO_UTF8(*PlayerName));
+	 UE_LOG(LogTemp, Warning, TEXT("%s"), *FString(OtherNameStr.c_str()));
+	 UE_LOG(LogTemp, Warning, TEXT("%s"), *FString(PlayerNameStr.c_str()));*/
 
 	if (PlayerName == OtherName)
 	{
 		Destroy();
 	}
+}
+
+void APickup::OnPickup_Implementation()
+{
+
 }
 
 bool APickup::IsActive()
