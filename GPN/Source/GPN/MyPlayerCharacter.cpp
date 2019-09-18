@@ -4,8 +4,7 @@
 #include "MyPlayerCharacter.h"
 #include "InteractInterface.h"
 #include "LightSwitch.h"
-
-
+#include "Blueprint/UserWidget.h"
 
 // Sets default values
 AMyPlayerCharacter::AMyPlayerCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.DoNotCreateDefaultSubobject(ACharacter::MeshComponentName))
@@ -97,6 +96,7 @@ void AMyPlayerCharacter::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp,
 void AMyPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
 	// Set camera to default pos
 	FRotator rot(0.0f, CameraAngle, 0.0f);
 	CameraOffset = rot.RotateVector(CameraOffset);
@@ -106,6 +106,18 @@ void AMyPlayerCharacter::BeginPlay()
 	FRotator Rot = FRotationMatrix::MakeFromX(OurCamera->GetComponentLocation() - MyMesh->GetComponentLocation()).Rotator();
 	Rot.Pitch = -9.0f;
 	OurCamera->SetRelativeRotation(Rot);
+
+	// Game UI
+	if (wGameUI)
+	{
+		MyGameUI = CreateWidget<UUserWidget>(GetWorld(), wGameUI);
+
+		if (MyGameUI)
+		{
+			MyGameUI->AddToViewport();
+			ChargeBar = (UProgressBar*)(MyGameUI->GetWidgetFromName("ChargeBar"));
+		}
+	}
 }
 
 // Called every frame
@@ -133,6 +145,8 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 	{
 		RotCamLeftInput();
 	}
+
+	ChargeBar->SetPercent(batteryCharge);
 }
 
 // Called to bind functionality to input
@@ -170,7 +184,7 @@ void AMyPlayerCharacter::Interact()
 
 void AMyPlayerCharacter::DoJump()
 {
-	MyMesh->AddImpulse(GetActorUpVector() * 1000.0f);
+	// MyMesh->AddImpulse(GetActorUpVector() * 1000.0f);
 }
 
 void AMyPlayerCharacter::Move_XAxis(float AxisValue)

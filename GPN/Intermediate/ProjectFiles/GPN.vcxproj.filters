@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GPN.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{3D8A047D-5A7B-4183-A123-4A2786831D4D}</UniqueIdentifier>
+      <UniqueIdentifier>{C4A9C062-18A7-42A6-B42A-5711452D2281}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GPN.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{484E6E13-BE3C-4AB6-A533-D174DE710304}</UniqueIdentifier>
+      <UniqueIdentifier>{61360CDE-76D9-4583-B036-0C0BD7BB0C00}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GPN">
-      <UniqueIdentifier>{876EF478-8283-4151-9C6C-BD6035091465}</UniqueIdentifier>
+      <UniqueIdentifier>{D6C48686-3121-4E61-B266-B1CC9FA0B307}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GPN\GPN.Build.cs">
       <Filter>Source\GPN</Filter>
@@ -73,6 +73,48 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\GPN\SpawnVolume.h">
       <Filter>Source\GPN</Filter>
+    </ClInclude>
+    <Filter Include="Source\GPN\Battery">
+      <UniqueIdentifier>{4F1935AA-9784-4AA4-987A-67BF9745BA66}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GPN\Battery\BatteryCollector.Build.cs">
+      <Filter>Source\GPN\Battery</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\GPN\Battery\BatteryCollector.cpp">
+      <Filter>Source\GPN\Battery</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPN\Battery\BatteryCollector.h">
+      <Filter>Source\GPN\Battery</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GPN\Battery\BatteryCollectorCharacter.cpp">
+      <Filter>Source\GPN\Battery</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPN\Battery\BatteryCollectorCharacter.h">
+      <Filter>Source\GPN\Battery</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GPN\Battery\BatteryCollectorGameMode.cpp">
+      <Filter>Source\GPN\Battery</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPN\Battery\BatteryCollectorGameMode.h">
+      <Filter>Source\GPN\Battery</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GPN\Battery\BatteryPickup.cpp">
+      <Filter>Source\GPN\Battery</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPN\Battery\BatteryPickup.h">
+      <Filter>Source\GPN\Battery</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GPN\Battery\Pickup.cpp">
+      <Filter>Source\GPN\Battery</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPN\Battery\Pickup.h">
+      <Filter>Source\GPN\Battery</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GPN\Battery\SpawnVolume.cpp">
+      <Filter>Source\GPN\Battery</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPN\Battery\SpawnVolume.h">
+      <Filter>Source\GPN\Battery</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -7,7 +7,10 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Components/BoxComponent.h"
+#include "ParticleDefinitions.h"
+#include "Runtime/Engine/Classes/Particles/ParticleSystemComponent.h"
 #include "ConstructorHelpers.h"
+#include "Kismet/GameplayStatics.h"
 #include "MyPlayerCharacter.h"
 #include "Pickup.generated.h"
 
@@ -47,10 +50,18 @@ public:
 	void SetActive(bool NewPickupState);
 
 
+
 private:
 	float RotationValueZ = 0.0f;
 	float RotationValueX = 0.0f;
 	float RotationValueY = 2.0f;
+
+	FTimerHandle DestroyTimer;
+
+	void DestroyStuff();
+
+	UParticleSystemComponent* theParticles;
+
 	UPROPERTY()
 		USceneComponent* Root;
 
@@ -59,4 +70,7 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = Pickup)
 		UBoxComponent* BoxCollision;
+
+	UPROPERTY(VisibleAnywhere, Category = Pickup)
+		UParticleSystem* LightningParticles;
 };

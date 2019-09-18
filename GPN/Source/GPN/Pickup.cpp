@@ -26,6 +26,10 @@ APickup::APickup()
 		Mesh->SetStaticMesh(TheMeshAsset);
 	}
 
+	// Particles
+	static ConstructorHelpers::FObjectFinder<UParticleSystem> LightningParticlesAsset(TEXT("/Game/ExampleContent/Effects/ParticleSystems/P_electricity_arc.P_electricity_arc"));
+	LightningParticles = LightningParticlesAsset.Object;
+
 	// Set collisions
 	BoxCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxCollision"));
 	BoxCollision->AttachTo(Root);
@@ -76,8 +80,11 @@ void APickup::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherA
 
 	if (PlayerName == OtherName)
 	{
-
-		Destroy();
+		theParticles = UGameplayStatics::SpawnEmitterAtLocation(this, LightningParticles, GetActorLocation(), GetActorRotation(), true);
+		// https://answers.unrealengine.com/questions/597336/setting-beam-emitter-source-and-target-on-runtime.html
+		theParticles->SetBeamSourcePoint(0, GetActorLocation(), 0);
+		theParticles->SetBeamTargetPoint(0, OtherActor->GetActorLocation(), 0);
+		GetWorld()->GetTimerManager().SetTimer(DestroyTimer, this, &APickup::DestroyStuff, 2.0f, false);
 	}
 }
 
@@ -94,4 +101,10 @@ bool APickup::IsActive()
 void APickup::SetActive(bool NewPickupState)
 {
 	bIsActive = NewPickupState;
+}
+
+void APickup::DestroyStuff()
+{
+	theParticles->DeactivateSystem();
+	Destroy();
 }

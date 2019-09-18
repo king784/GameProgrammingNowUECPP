@@ -8,6 +8,7 @@
 #include "GameFramework/Character.h"
 #include "Camera/CameraComponent.h"
 #include "Components/BoxComponent.h"
+#include "Components/ProgressBar.h"
 #include "ConstructorHelpers.h"
 #include "MyPlayerCharacter.generated.h"
 
@@ -30,6 +31,12 @@ public:
 
 	UCameraComponent* OurCamera;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+		TSubclassOf<class UUserWidget> wGameUI;
+
+	UPROPERTY()
+	UUserWidget* MyGameUI;
+
 	UFUNCTION()
 	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
@@ -43,6 +50,8 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UBoxComponent* BoxCollision;
 
+	UProgressBar* ChargeBar;
+
 	UPROPERTY(VisibleAnywhere)
 	bool isInAir;
 
@@ -51,7 +60,7 @@ public:
 
 	void UpdateBatteryCharge(float newCharge);
 
-	// Input functions
+	// Movement functions
 	void Move_XAxis(float AxisValue);
 	void Move_YAxis(float AxisValue);
 
@@ -67,7 +76,7 @@ public:
 	void Interact();
 	AActor* InteractTarget;
 
-	// Input variables
+	// Movement variables
 	FVector CurrentVelocity;
 
 private:

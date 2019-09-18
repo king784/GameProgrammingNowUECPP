@@ -24,6 +24,7 @@ void EmptyLinkFunctionForGeneratedCodePickup() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	GPN_API UFunction* Z_Construct_UFunction_APickup_OnPickup();
 	GPN_API UFunction* Z_Construct_UFunction_APickup_SetActive();
+	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
@@ -237,6 +238,10 @@ void EmptyLinkFunctionForGeneratedCodePickup() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LightningParticles_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_LightningParticles;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BoxCollision_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BoxCollision;
@@ -269,6 +274,13 @@ void EmptyLinkFunctionForGeneratedCodePickup() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickup_Statics::NewProp_LightningParticles_MetaData[] = {
+		{ "Category", "Pickup" },
+		{ "ModuleRelativePath", "Pickup.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickup_Statics::NewProp_LightningParticles = { "LightningParticles", nullptr, (EPropertyFlags)0x0040000000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APickup, LightningParticles), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APickup_Statics::NewProp_LightningParticles_MetaData, ARRAY_COUNT(Z_Construct_UClass_APickup_Statics::NewProp_LightningParticles_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickup_Statics::NewProp_BoxCollision_MetaData[] = {
 		{ "Category", "Pickup" },
 		{ "EditInline", "true" },
@@ -293,6 +305,7 @@ void EmptyLinkFunctionForGeneratedCodePickup() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickup_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x0040000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APickup, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APickup_Statics::NewProp_Root_MetaData, ARRAY_COUNT(Z_Construct_UClass_APickup_Statics::NewProp_Root_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APickup_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickup_Statics::NewProp_LightningParticles,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickup_Statics::NewProp_BoxCollision,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickup_Statics::NewProp_Mesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickup_Statics::NewProp_Root,
@@ -324,7 +337,7 @@ void EmptyLinkFunctionForGeneratedCodePickup() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APickup, 3100892538);
+	IMPLEMENT_CLASS(APickup, 3192597084);
 	template<> GPN_API UClass* StaticClass<APickup>()
 	{
 		return APickup::StaticClass();

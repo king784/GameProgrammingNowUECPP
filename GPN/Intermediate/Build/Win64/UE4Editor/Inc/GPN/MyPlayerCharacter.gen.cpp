@@ -24,6 +24,8 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 	GPN_API UFunction* Z_Construct_UFunction_AMyPlayerCharacter_OnOverlapEnd();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
+	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 // End Cross Module References
 	void AMyPlayerCharacter::StaticRegisterNativesAMyPlayerCharacter()
 	{
@@ -199,6 +201,14 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MyMesh_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MyMesh;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MyGameUI_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MyGameUI;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_wGameUI_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_wGameUI;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -247,10 +257,26 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MyMesh = { "MyMesh", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayerCharacter, MyMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MyMesh_MetaData, ARRAY_COUNT(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MyMesh_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MyGameUI_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "MyPlayerCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MyGameUI = { "MyGameUI", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayerCharacter, MyGameUI), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MyGameUI_MetaData, ARRAY_COUNT(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MyGameUI_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_wGameUI_MetaData[] = {
+		{ "Category", "Widgets" },
+		{ "ModuleRelativePath", "MyPlayerCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_wGameUI = { "wGameUI", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayerCharacter, wGameUI), Z_Construct_UClass_UUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_wGameUI_MetaData, ARRAY_COUNT(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_wGameUI_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyPlayerCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_isInAir,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_BoxCollision,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MyMesh,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MyGameUI,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_wGameUI,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMyPlayerCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMyPlayerCharacter>::IsAbstract,
@@ -279,7 +305,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyPlayerCharacter, 315851868);
+	IMPLEMENT_CLASS(AMyPlayerCharacter, 3045864925);
 	template<> GPN_API UClass* StaticClass<AMyPlayerCharacter>()
 	{
 		return AMyPlayerCharacter::StaticClass();
