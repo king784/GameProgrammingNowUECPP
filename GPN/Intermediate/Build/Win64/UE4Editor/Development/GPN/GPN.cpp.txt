@@ -1,0 +1,2 @@
+D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Definitions.GPN.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN\GPN.h
