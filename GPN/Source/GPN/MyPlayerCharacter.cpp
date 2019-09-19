@@ -131,8 +131,22 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 	// Handle movement based on our "MoveX" and "MoveY" axes
 	if (!CurrentVelocity.IsZero())
 	{
-		FVector NewLocation = GetActorLocation() + (CurrentVelocity * DeltaTime) * batteryCharge;
-		SetActorLocation(NewLocation);
+		if (GetActorLocation().X > MovementBoundBL.X && GetActorLocation().Y > MovementBoundBL.Y)
+		{
+			if (GetActorLocation().X < MovementBoundTR.X && GetActorLocation().Y < MovementBoundTR.Y)
+			{
+				FVector NewLocation = GetActorLocation() + (CurrentVelocity * DeltaTime) * batteryCharge;
+				SetActorLocation(NewLocation);
+			}
+			else
+			{
+				SetActorLocation(LastLocation);
+			}
+		}
+		else
+		{
+			SetActorLocation(LastLocation);
+		}
 	}
 	
 

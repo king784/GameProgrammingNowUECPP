@@ -80,6 +80,9 @@ public:
 	FVector CurrentVelocity;
 
 private:
+	FVector MovementBoundTR = FVector(2440.0, 2600.0, 160.0);
+	FVector MovementBoundBL = FVector(-1530.0, -1080.0, 160.0);
+	FVector LastLocation = FVector(0.0);
 	FVector CameraOffset;
 	float CameraAngle = 1.0f;
 	bool RotLeft = false;

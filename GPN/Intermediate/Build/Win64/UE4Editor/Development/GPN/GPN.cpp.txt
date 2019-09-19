@@ -1,2 +1,0 @@
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Definitions.GPN.h
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN\GPN.h
