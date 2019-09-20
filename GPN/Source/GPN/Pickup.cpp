@@ -78,6 +78,8 @@ void APickup::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherA
 	 UE_LOG(LogTemp, Warning, TEXT("%s"), *FString(OtherNameStr.c_str()));
 	 UE_LOG(LogTemp, Warning, TEXT("%s"), *FString(PlayerNameStr.c_str()));*/
 
+	AMyPlayerCharacter* playerChar = Cast<AMyPlayerCharacter>(OtherActor);
+
 	if (PlayerName == OtherName)
 	{
 		theParticles = UGameplayStatics::SpawnEmitterAtLocation(this, LightningParticles, GetActorLocation(), GetActorRotation(), true);
