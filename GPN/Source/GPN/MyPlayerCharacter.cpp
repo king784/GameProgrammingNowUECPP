@@ -78,7 +78,7 @@ void AMyPlayerCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AAc
 		FVector NewMoveVec = OtherActor->GetActorForwardVector(); // OtherActor->GetActorLocation() - GetActorLocation();
 		NewMoveVec = NewMoveVec.GetSafeNormal();
 		NewMoveVec *= 100.0f;
-		NewMoveVec.Z = 69.0f;
+		NewMoveVec.Z = 90.0f;
 		SetActorLocation(NewMoveVec);
 		// NewMoveVec = NewMoveVec.Normalize(0.1f);
 		// NewMoveVec *= 100.0f;
@@ -142,6 +142,9 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 	// Handle movement based on our "MoveX" and "MoveY" axes
 	if (!CurrentVelocity.IsZero())
 	{
+		FVector MoveVec = OurCamera->GetForwardVector();
+		FRotator rot(0.0f, CameraAngle, 0.0f);
+		CurrentVelocity = rot.RotateVector(CurrentVelocity);
 		FVector NewLocation = GetActorLocation() + (CurrentVelocity * DeltaTime) * batteryCharge;
 		SetActorLocation(NewLocation);
 		
@@ -217,8 +220,8 @@ void AMyPlayerCharacter::DoJump()
 void AMyPlayerCharacter::Move_XAxis(float AxisValue)
 {
 	// Move at 100 units per second forward or backward
-	 AddMovementInput(GetActorForwardVector(), FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f);
-	 CurrentVelocity.X = FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f;
+	AddMovementInput(GetActorForwardVector(), FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f);
+	CurrentVelocity.X = FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f;
 }
 
 void AMyPlayerCharacter::Move_YAxis(float AxisValue)
