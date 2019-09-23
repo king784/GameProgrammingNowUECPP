@@ -78,10 +78,11 @@ void APickup::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherA
 	 UE_LOG(LogTemp, Warning, TEXT("%s"), *FString(OtherNameStr.c_str()));
 	 UE_LOG(LogTemp, Warning, TEXT("%s"), *FString(PlayerNameStr.c_str()));*/
 
-	AMyPlayerCharacter* playerChar = Cast<AMyPlayerCharacter>(OtherActor);
+	AMyPlayerCharacter* PlayerChar = Cast<AMyPlayerCharacter>(OtherActor);
 
-	if (PlayerName == OtherName)
+	if(PlayerChar)
 	{
+		PlayerChar->UpdateBatteryCharge(10.0f);
 		theParticles = UGameplayStatics::SpawnEmitterAtLocation(this, LightningParticles, GetActorLocation(), GetActorRotation(), true);
 		// https://answers.unrealengine.com/questions/597336/setting-beam-emitter-source-and-target-on-runtime.html
 		theParticles->SetBeamSourcePoint(0, GetActorLocation(), 0);

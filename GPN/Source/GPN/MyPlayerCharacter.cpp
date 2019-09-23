@@ -72,6 +72,17 @@ void AMyPlayerCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AAc
 		ALightSwitch* theSwitch = Cast<ALightSwitch>(OtherActor);
 		theSwitch->ToggleInfo();
 	}
+	
+	if(OtherName.Contains("BlockingVolume"))
+	{
+		FVector NewMoveVec = OtherActor->GetActorForwardVector(); // OtherActor->GetActorLocation() - GetActorLocation();
+		NewMoveVec = NewMoveVec.GetSafeNormal();
+		NewMoveVec *= 100.0f;
+		NewMoveVec.Z = 69.0f;
+		SetActorLocation(NewMoveVec);
+		// NewMoveVec = NewMoveVec.Normalize(0.1f);
+		// NewMoveVec *= 100.0f;
+	}
 	// Check if implements:  if(UKismetSystemLibrary::DoesImplementInterface(OtherActor,))
 }
 
@@ -131,22 +142,24 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 	// Handle movement based on our "MoveX" and "MoveY" axes
 	if (!CurrentVelocity.IsZero())
 	{
-		if (GetActorLocation().X > MovementBoundBL.X && GetActorLocation().Y > MovementBoundBL.Y)
-		{
-			if (GetActorLocation().X < MovementBoundTR.X && GetActorLocation().Y < MovementBoundTR.Y)
-			{
-				FVector NewLocation = GetActorLocation() + (CurrentVelocity * DeltaTime) * batteryCharge;
-				SetActorLocation(NewLocation);
-			}
-			else
-			{
-				SetActorLocation(LastLocation);
-			}
-		}
-		else
-		{
-			SetActorLocation(LastLocation);
-		}
+		FVector NewLocation = GetActorLocation() + (CurrentVelocity * DeltaTime) * batteryCharge;
+		SetActorLocation(NewLocation);
+		
+		// if (GetActorLocation().X > MovementBoundBL.X && GetActorLocation().Y > MovementBoundBL.Y)
+		// {
+		// 	if (GetActorLocation().X < MovementBoundTR.X && GetActorLocation().Y < MovementBoundTR.Y)
+		// 	{
+		// 		// Put location change code here
+		// 	}
+		// 	else
+		// 	{
+		// 		SetActorLocation(LastLocation);
+		// 	}
+		// }
+		// else
+		// {
+		// 	SetActorLocation(LastLocation);
+		// }
 	}
 	
 
