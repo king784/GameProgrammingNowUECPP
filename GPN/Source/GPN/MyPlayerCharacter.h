@@ -9,6 +9,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/BoxComponent.h"
 #include "Components/ProgressBar.h"
+#include ""
 #include "ConstructorHelpers.h"
 #include "MyPlayerCharacter.generated.h"
 
@@ -29,10 +30,13 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(VisibleAnywhere)
 	UCameraComponent* OurCamera;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
 		TSubclassOf<class UUserWidget> wGameUI;
+
+	const ConstructorHelpers::FObjectFinder<UAnimBlueprint> AnimObj(TEXT("AnimBlueprint'/Game/MixamoAnimPack/Mixamo_Maw/Anims/MixamoAnimBP_Maw.MixamoAnimBP_Maw'"));
 
 	UPROPERTY()
 	UUserWidget* MyGameUI;
@@ -61,6 +65,8 @@ public:
 	void UpdateBatteryCharge(float newCharge);
 
 	// Movement functions
+	UPROPERTY(VisibleAnywhere)
+	float MoveSpeed = 1000.0f;
 	void Move_XAxis(float AxisValue);
 	void Move_YAxis(float AxisValue);
 

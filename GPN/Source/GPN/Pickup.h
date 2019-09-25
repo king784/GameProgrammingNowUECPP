@@ -73,4 +73,8 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = Pickup)
 		UParticleSystem* LightningParticles;
+
+	AMyPlayerCharacter* PlayerChar;
+
+	bool ChargeGiven = false;
 };

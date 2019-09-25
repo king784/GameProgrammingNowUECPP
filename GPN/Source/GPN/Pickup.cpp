@@ -9,7 +9,7 @@
 APickup::APickup()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = false;
+	PrimaryActorTick.bCanEverTick = true;
 
 	// Set mesh up
 	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
@@ -52,6 +52,8 @@ void APickup::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	UE_LOG(LogTemp, Warning, TEXT("yeet"));
+
 	// Location
 	FVector NewLocation = GetActorLocation();
 	float DeltaHeight = (FMath::Sin(RunningTime + DeltaTime) - FMath::Sin(RunningTime));
@@ -65,6 +67,14 @@ void APickup::Tick(float DeltaTime)
 	FRotator NewRotation = FRotator(RotationValueX, RotationValueY, RotationValueZ);
 	FQuat QuatRotation = FQuat(NewRotation);
 	AddActorLocalRotation(QuatRotation);
+
+	if (PlayerChar)
+	{
+		FVector PlayerLoc = PlayerChar->GetActorLocation();
+		PlayerLoc.Z += 200.0f;
+		theParticles->SetBeamSourcePoint(0, GetActorLocation(), 0);
+		theParticles->SetBeamTargetPoint(0, PlayerLoc, 0);
+	}
 }
 
 // Called when hit
@@ -78,16 +88,18 @@ void APickup::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherA
 	 UE_LOG(LogTemp, Warning, TEXT("%s"), *FString(OtherNameStr.c_str()));
 	 UE_LOG(LogTemp, Warning, TEXT("%s"), *FString(PlayerNameStr.c_str()));*/
 
-	AMyPlayerCharacter* PlayerChar = Cast<AMyPlayerCharacter>(OtherActor);
+	AMyPlayerCharacter* NewPlayerChar = Cast<AMyPlayerCharacter>(OtherActor);
 
-	if(PlayerChar)
+	if(NewPlayerChar && !ChargeGiven)
 	{
-		PlayerChar->UpdateBatteryCharge(10.0f);
+		PlayerChar = NewPlayerChar;
+		PlayerChar->UpdateBatteryCharge(0.6f);
 		theParticles = UGameplayStatics::SpawnEmitterAtLocation(this, LightningParticles, GetActorLocation(), GetActorRotation(), true);
 		// https://answers.unrealengine.com/questions/597336/setting-beam-emitter-source-and-target-on-runtime.html
 		theParticles->SetBeamSourcePoint(0, GetActorLocation(), 0);
 		theParticles->SetBeamTargetPoint(0, OtherActor->GetActorLocation(), 0);
-		GetWorld()->GetTimerManager().SetTimer(DestroyTimer, this, &APickup::DestroyStuff, 2.0f, false);
+		GetWorld()->GetTimerManager().SetTimer(DestroyTimer, this, &APickup::DestroyStuff, 1.0f, false);
+		ChargeGiven = true;
 	}
 }
 

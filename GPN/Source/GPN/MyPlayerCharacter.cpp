@@ -136,16 +136,44 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	UpdateBatteryCharge(-0.0001f);
+	UpdateBatteryCharge(-0.0005f);
 	//UE_LOG(LogTemp, Warning, TEXT("%f"), batteryCharge);
 
 	// Handle movement based on our "MoveX" and "MoveY" axes
 	if (!CurrentVelocity.IsZero())
 	{
-		FVector MoveVec = OurCamera->GetForwardVector();
-		FRotator rot(0.0f, CameraAngle, 0.0f);
-		CurrentVelocity = rot.RotateVector(CurrentVelocity);
-		FVector NewLocation = GetActorLocation() + (CurrentVelocity * DeltaTime) * batteryCharge;
+		// FVector MoveVec = OurCamera->GetForwardVector();
+		// FRotator rot(0.0f, CameraAngle, 0.0f);
+		// CurrentVelocity = rot.RotateVector(CurrentVelocity);
+		
+		// FQuat Between = FQuat::FindBetween(FVector(OurCamera->GetForwardVector()).GetSafeNormal(), FVector(0.0f, 1.0f, 0.0f).GetSafeNormal());
+		// FRotator MyRot(0.0f, Between.Y, 0.0f);
+		// float Angle = FMath::Abs(MyRot.Yaw);
+		// CurrentVelocity = MyRot.RotateVector(CurrentVelocity);
+		
+		FVector RightVec = -CurrentVelocity.Y * OurCamera->GetRightVector();
+		FVector ForwardVec = -CurrentVelocity.X * OurCamera->GetForwardVector();
+		ForwardVec = ForwardVec.RotateAngleAxis(-9.0f, OurCamera->GetRightVector());
+
+		FRotator MeshRot(ForwardVec.GetSafeNormal().Rotation() + RightVec.GetSafeNormal().Rotation());
+		if (RightVec.Size() > 10.0f && ForwardVec.Size() > 10.0f)
+		{
+
+		}
+		else
+		{
+			MeshRot.Yaw -= 90.0f;
+		}
+		
+		
+
+		MyMesh->SetWorldRotation(MeshRot);
+		
+		// FRotator RotForward(ForwardVec.GetSafeNormal().Rotation());
+		// RotForward.Pitch += 20.0f;
+		// ForwardVec = RotForward.RotateVector(ForwardVec);
+
+		FVector NewLocation = GetActorLocation() + ((RightVec + ForwardVec) * DeltaTime) * batteryCharge;
 		SetActorLocation(NewLocation);
 		
 		// if (GetActorLocation().X > MovementBoundBL.X && GetActorLocation().Y > MovementBoundBL.Y)
@@ -220,15 +248,15 @@ void AMyPlayerCharacter::DoJump()
 void AMyPlayerCharacter::Move_XAxis(float AxisValue)
 {
 	// Move at 100 units per second forward or backward
-	AddMovementInput(GetActorForwardVector(), FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f);
-	CurrentVelocity.X = FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f;
+	AddMovementInput(GetActorForwardVector(), FMath::Clamp(AxisValue, -1.0f, 1.0f) * MoveSpeed);
+	CurrentVelocity.X = FMath::Clamp(AxisValue, -1.0f, 1.0f) * MoveSpeed;
 }
 
 void AMyPlayerCharacter::Move_YAxis(float AxisValue)
 {
 	// Move at 100 units per second right or left
-	AddMovementInput(GetActorRightVector(), FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f);
-	CurrentVelocity.Y = FMath::Clamp(AxisValue, -1.0f, 1.0f) * 500.0f;
+	AddMovementInput(GetActorRightVector(), FMath::Clamp(AxisValue, -1.0f, 1.0f) * MoveSpeed);
+	CurrentVelocity.Y = FMath::Clamp(AxisValue, -1.0f, 1.0f) * MoveSpeed;
 }
 
 void AMyPlayerCharacter::RotCamRightInput()

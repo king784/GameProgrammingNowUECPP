@@ -26,6 +26,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 // End Cross Module References
 	void AMyPlayerCharacter::StaticRegisterNativesAMyPlayerCharacter()
 	{
@@ -189,6 +190,10 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_isInAir_MetaData[];
 #endif
 		static void NewProp_isInAir_SetBit(void* Obj);
@@ -209,6 +214,10 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_wGameUI_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_wGameUI;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OurCamera_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OurCamera;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -229,6 +238,14 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MoveSpeed_MetaData[] = {
+		{ "Category", "MyPlayerCharacter" },
+		{ "ModuleRelativePath", "MyPlayerCharacter.h" },
+		{ "ToolTip", "Movement functions" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayerCharacter, MoveSpeed), METADATA_PARAMS(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MoveSpeed_MetaData, ARRAY_COUNT(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MoveSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_isInAir_MetaData[] = {
 		{ "Category", "MyPlayerCharacter" },
@@ -271,12 +288,22 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_wGameUI = { "wGameUI", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayerCharacter, wGameUI), Z_Construct_UClass_UUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_wGameUI_MetaData, ARRAY_COUNT(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_wGameUI_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_OurCamera_MetaData[] = {
+		{ "Category", "MyPlayerCharacter" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "MyPlayerCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_OurCamera = { "OurCamera", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayerCharacter, OurCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_OurCamera_MetaData, ARRAY_COUNT(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_OurCamera_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyPlayerCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MoveSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_isInAir,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_BoxCollision,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MyMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_MyGameUI,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_wGameUI,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_OurCamera,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMyPlayerCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMyPlayerCharacter>::IsAbstract,
@@ -305,7 +332,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyPlayerCharacter, 3045864925);
+	IMPLEMENT_CLASS(AMyPlayerCharacter, 3744322416);
 	template<> GPN_API UClass* StaticClass<AMyPlayerCharacter>()
 	{
 		return AMyPlayerCharacter::StaticClass();
