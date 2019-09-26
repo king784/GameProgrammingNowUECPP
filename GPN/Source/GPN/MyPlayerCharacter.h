@@ -9,7 +9,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/BoxComponent.h"
 #include "Components/ProgressBar.h"
-#include ""
+#include "Animation/AnimBlueprint.h"
 #include "ConstructorHelpers.h"
 #include "MyPlayerCharacter.generated.h"
 
@@ -36,7 +36,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
 		TSubclassOf<class UUserWidget> wGameUI;
 
-	const ConstructorHelpers::FObjectFinder<UAnimBlueprint> AnimObj(TEXT("AnimBlueprint'/Game/MixamoAnimPack/Mixamo_Maw/Anims/MixamoAnimBP_Maw.MixamoAnimBP_Maw'"));
+	UPROPERTY(EditAnywhere)
+		UAnimBlueprint* AnimBP;
+	//const ConstructorHelpers::FObjectFinder<UAnimBlueprint> AnimObj(TEXT("AnimBlueprint'/Game/MixamoAnimPack/Mixamo_Maw/Anims/MixamoAnimBP_Maw.MixamoAnimBP_Maw'"));
 
 	UPROPERTY()
 	UUserWidget* MyGameUI;
@@ -47,6 +49,9 @@ public:
 	UFUNCTION()
 	void OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
+	UFUNCTION(BlueprintCallable)
+		void Die();
+
 	// Mesh
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	USkeletalMeshComponent* MyMesh;
@@ -56,7 +61,7 @@ public:
 
 	UProgressBar* ChargeBar;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	bool isInAir;
 
 	// Called to bind functionality to input
@@ -65,7 +70,7 @@ public:
 	void UpdateBatteryCharge(float newCharge);
 
 	// Movement functions
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	float MoveSpeed = 1000.0f;
 	void Move_XAxis(float AxisValue);
 	void Move_YAxis(float AxisValue);
@@ -83,16 +88,31 @@ public:
 	AActor* InteractTarget;
 
 	// Movement variables
+	UPROPERTY(BlueprintReadWrite)
 	FVector CurrentVelocity;
 
+	UPROPERTY(BlueprintReadWrite)
+	FVector AnimationMoveSpeed;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool IsDead;
+
 private:
+	// Movement boundaries
 	FVector MovementBoundTR = FVector(2440.0, 2600.0, 160.0);
 	FVector MovementBoundBL = FVector(-1530.0, -1080.0, 160.0);
 	FVector LastLocation = FVector(0.0);
+	// Camera values
 	FVector CameraOffset;
 	float CameraAngle = 1.0f;
 	bool RotLeft = false;
 	bool RotRight = false;
+
 	bool CanInteract = false;
-	float batteryCharge = 1.0f;
+	float BatteryCharge = 1.0f;
+
+	// Animation variables for controlling animation, Doing this in BP to avoid crash
+	// UAnimInstance* AnimInst;
+	// UFloatProperty* SpeedAnim;
+	// UBoolProperty* IsDeadAnim;
 };

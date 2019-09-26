@@ -53,9 +53,6 @@ AMyPlayerCharacter::AMyPlayerCharacter(const FObjectInitializer& ObjectInitializ
 	OurCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("OurCamera"));
 	// Attach our camera and visible object to our root component. Offset and rotate the camera.
 	OurCamera->SetupAttachment(RootComponent);
-	OurCamera->SetRelativeLocation(FVector(-700.0f, 0.0f, 450.0f));
-	OurCamera->SetRelativeRotation(FRotator(-20.0f, 0.0f, 0.0f));
-	CameraOffset = FVector(MyMesh->GetComponentLocation().X - 700.0f, MyMesh->GetComponentLocation().Y, MyMesh->GetComponentLocation().Z + 450.0f);
 }
 
 void AMyPlayerCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -103,20 +100,22 @@ void AMyPlayerCharacter::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp,
 	// Check if implements:  if(UKismetSystemLibrary::DoesImplementInterface(OtherActor,))
 }
 
+void AMyPlayerCharacter::Die()
+{
+	IsDead = true;
+}
+
 // Called when the game starts or when spawned
 void AMyPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
 	// Set camera to default pos
-	FRotator rot(0.0f, CameraAngle, 0.0f);
-	CameraOffset = rot.RotateVector(CameraOffset);
-
-	OurCamera->SetRelativeLocation(CameraOffset);
-
-	FRotator Rot = FRotationMatrix::MakeFromX(OurCamera->GetComponentLocation() - MyMesh->GetComponentLocation()).Rotator();
-	Rot.Pitch = -9.0f;
-	OurCamera->SetRelativeRotation(Rot);
+	OurCamera->SetRelativeLocation(FVector(-700.0f, 0.0f, 450.0f));
+	OurCamera->SetRelativeRotation(FRotator(-20.0f, 0.0f, 0.0f));
+	CameraOffset = FVector(MyMesh->GetComponentLocation().X - 700.0f, MyMesh->GetComponentLocation().Y, MyMesh->GetComponentLocation().Z + 450.0f);
+	
+	// RotCamRightInput();
 
 	// Game UI
 	if (wGameUI)
@@ -129,6 +128,16 @@ void AMyPlayerCharacter::BeginPlay()
 			ChargeBar = (UProgressBar*)(MyGameUI->GetWidgetFromName("ChargeBar"));
 		}
 	}
+
+	// Get animation instance fields to update. Crashes so I'm doing this in blueprints.
+	// FName SpeedAnimPropName = TEXT("Speed");
+	// FName IsDeadAnimPropName = TEXT("IsDead");
+	// AnimInst = MyMesh->GetAnimInstance();
+	// if (AnimInst)
+	// {
+	// 	SpeedAnim = FindField<UFloatProperty>(AnimInst->GetClass(), SpeedAnimPropName);
+	// 	IsDeadAnim = FindField<UBoolProperty>(AnimInst->GetClass(), IsDeadAnimPropName);
+	// }
 }
 
 // Called every frame
@@ -155,6 +164,7 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 		FVector ForwardVec = -CurrentVelocity.X * OurCamera->GetForwardVector();
 		ForwardVec = ForwardVec.RotateAngleAxis(-9.0f, OurCamera->GetRightVector());
 
+		// Needs some adjustement, because when 2 movement keys are pressed simultaneously, rotation is wrong
 		FRotator MeshRot(ForwardVec.GetSafeNormal().Rotation() + RightVec.GetSafeNormal().Rotation());
 		if (RightVec.Size() > 10.0f && ForwardVec.Size() > 10.0f)
 		{
@@ -165,16 +175,20 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 			MeshRot.Yaw -= 90.0f;
 		}
 		
-		
-
 		MyMesh->SetWorldRotation(MeshRot);
 		
 		// FRotator RotForward(ForwardVec.GetSafeNormal().Rotation());
 		// RotForward.Pitch += 20.0f;
 		// ForwardVec = RotForward.RotateVector(ForwardVec);
 
-		FVector NewLocation = GetActorLocation() + ((RightVec + ForwardVec) * DeltaTime) * batteryCharge;
+		FVector NewLocation = GetActorLocation() + ((RightVec + ForwardVec) * DeltaTime) * BatteryCharge;
 		SetActorLocation(NewLocation);
+
+		AnimationMoveSpeed = ((RightVec + ForwardVec) * DeltaTime) * BatteryCharge;
+
+		// Set animation blueprint values, doing in bp because crash
+		// float MovementLength = ForwardVec.Size() + RightVec.Size();
+		// SpeedAnim->SetPropertyValue(AnimInst, MovementLength);
 		
 		// if (GetActorLocation().X > MovementBoundBL.X && GetActorLocation().Y > MovementBoundBL.Y)
 		// {
@@ -192,7 +206,10 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 		// 	SetActorLocation(LastLocation);
 		// }
 	}
-	
+	else
+	{
+		AnimationMoveSpeed = FVector(0.0f);
+	}
 
 	if (RotRight)
 	{
@@ -204,7 +221,11 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 		RotCamLeftInput();
 	}
 
-	ChargeBar->SetPercent(batteryCharge);
+	// Change charge bar values
+	ChargeBar->SetPercent(BatteryCharge);
+	float ReverseBatteryCharge = 1.0f - BatteryCharge;
+	FLinearColor NewCol(ReverseBatteryCharge, BatteryCharge, 0.0f);
+	ChargeBar->SetFillColorAndOpacity(NewCol);
 }
 
 // Called to bind functionality to input
@@ -228,8 +249,8 @@ void AMyPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 
 void AMyPlayerCharacter::UpdateBatteryCharge(float newCharge)
 {
-	batteryCharge += newCharge;
-	batteryCharge = FMath::Clamp(batteryCharge, 0.0f, 1.0f);
+	BatteryCharge += newCharge;
+	BatteryCharge = FMath::Clamp(BatteryCharge, 0.0f, 1.0f);
 }
 
 void AMyPlayerCharacter::Interact()
