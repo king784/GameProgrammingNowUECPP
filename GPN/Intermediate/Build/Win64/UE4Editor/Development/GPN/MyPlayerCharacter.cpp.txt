@@ -1,149 +1,161 @@
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Definitions.GPN.h
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN\MyPlayerCharacter.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\string
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\xstring
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\iosfwd
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\cstdio
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\cstring
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\cwchar
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\xmemory
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\cstdint
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\limits
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\cfloat
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\climits
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\xatomic.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\xutility
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\utility
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.22.27905\INCLUDE\cctype
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\UMG\Public\Components/ProgressBar.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Slate\Public\Widgets/Notifications/SProgressBar.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Slate\SProgressBar.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\UMG\Public\Components/Widget.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\UMG\Public\Components/Visual.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Visual.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\UMG\Public\Components/SlateWrapperTypes.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\SlateWrapperTypes.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\UMG\Public\Slate/WidgetTransform.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetTransform.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Editor\UnrealEd\Public\Kismet2/CompilerResultsLog.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Editor\UnrealEd\Public\EdGraphToken.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Widget.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\ProgressBar.generated.h
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\MyPlayerCharacter.generated.h
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN\InteractInterface.h
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\InteractInterface.generated.h
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN\LightSwitch.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/TextRenderComponent.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\TextRenderComponent.generated.h
-C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\LightSwitch.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\UMG\Public\Blueprint/UserWidget.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\UMG\Public\Components/NamedSlotInterface.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\NamedSlotInterface.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Slate\Public\Widgets/Layout/Anchors.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Slate\Anchors.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Core\Public\Logging/MessageLog.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\UMG\Public\Animation/WidgetAnimation.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneSequence.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneSignedObject.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSignedObject.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneTrack.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\IMovieSceneTrackInstance.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneAnimTypeID.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneSection.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneFwd.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneSequenceID.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSequenceID.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\KeyParams.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieScene.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneSpawnable.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSpawnable.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneBinding.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneBinding.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieScenePossessable.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieScenePossessable.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneObjectBindingID.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneObjectBindingID.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneFrameMigration.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneFrameMigration.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneTimeController.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Core\Public\Misc/QualifiedFrameTime.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieScene.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/MovieSceneBlendType.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneBlendType.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Generators/MovieSceneEasingFunction.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEasingFunction.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSection.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Core\Public\Misc/InlineValue.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Compilation/MovieSceneSegmentCompiler.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneSegment.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Core\Public\UObject/SequencerObjectVersion.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSegment.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneTrack.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationTemplate.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneTrackIdentifier.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneTrackIdentifier.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationField.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationKey.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvaluationKey.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvaluationField.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationTrack.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieScenePlayback.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneSequenceTransform.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSequenceTransform.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvalTemplate.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvalTemplateBase.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvalTemplateBase.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneExecutionTokens.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneExecutionToken.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationScope.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/PersistentEvaluationData.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationOperand.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvaluationOperand.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneSequenceInstanceData.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSequenceInstanceData.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/MovieSceneBlendingAccumulator.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/BlendableToken.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/MovieSceneBlendingActuatorID.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/MovieSceneBlendingActuator.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\IMovieScenePlayer.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieScenePreAnimatedState.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneSpawnRegister.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\IMovieSceneObjectSpawner.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationState.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/BlendableTokenStack.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/MovieSceneInitialValueStore.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/MovieSceneAccumulatedBlendState.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation\Blending\MovieSceneBlendingAccumulator.inl
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Compilation/MovieSceneTemplateInterrogation.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvalTemplate.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneTrackImplementation.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneTrackImplementation.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationTree.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvaluationTrack.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneSequenceHierarchy.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneSectionParameters.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSectionParameters.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSequenceHierarchy.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvaluationTemplate.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSequence.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\UMG\Public\Animation/WidgetAnimationBinding.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetAnimationBinding.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetAnimation.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\UMG\Public\Blueprint/WidgetBlueprintGeneratedClass.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\UMG\Public\Binding/DynamicPropertyPath.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\PropertyPath\Public\PropertyPathHelpers.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\PropertyPath\Public\PropertyTypeCompatibility.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\PropertyPath\PropertyPathHelpers.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\DynamicPropertyPath.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetBlueprintGeneratedClass.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Definitions.GPN.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN\MyPlayerCharacter.h
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\string
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\xstring
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\iosfwd
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\cstdio
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\cstring
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\cwchar
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\xmemory0
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\cstdint
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\limits
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\cfloat
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\climits
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\xutility
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\utility
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\xatomic0.h
+D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE\cctype
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\UMG\Public\Components/ProgressBar.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Slate\Public\Widgets/Notifications/SProgressBar.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Slate\SProgressBar.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\UMG\Public\Components/Widget.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\UMG\Public\Components/Visual.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Visual.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\UMG\Public\Components/SlateWrapperTypes.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\SlateWrapperTypes.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\UMG\Public\Slate/WidgetTransform.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetTransform.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Editor\UnrealEd\Public\Kismet2/CompilerResultsLog.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Editor\UnrealEd\Public\EdGraphToken.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Widget.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\ProgressBar.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime/Engine/Classes/Kismet/GameplayStatics.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\MyPlayerCharacter.generated.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN\InteractInterface.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\InteractInterface.generated.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN\LightSwitch.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/TextRenderComponent.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\TextRenderComponent.generated.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\LightSwitch.generated.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN\NotifyInterface.h
+D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN\NotifyInterface.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\UMG\Public\Blueprint/UserWidget.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\UMG\Public\Components/NamedSlotInterface.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\NamedSlotInterface.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Slate\Public\Widgets/Layout/Anchors.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Slate\Anchors.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Core\Public\Logging/MessageLog.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\UMG\Public\Animation/WidgetAnimation.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneSequence.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneSignedObject.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSignedObject.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneTrack.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\IMovieSceneTrackInstance.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneAnimTypeID.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneSection.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneFwd.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneSequenceID.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSequenceID.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\KeyParams.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieScene.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneSpawnable.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSpawnable.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneBinding.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneBinding.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieScenePossessable.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieScenePossessable.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneObjectBindingID.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneObjectBindingID.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneFrameMigration.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneFrameMigration.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneTimeController.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Core\Public\Misc/QualifiedFrameTime.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieScene.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/MovieSceneBlendType.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneBlendType.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Generators/MovieSceneEasingFunction.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEasingFunction.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSection.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Core\Public\Misc/InlineValue.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Compilation/MovieSceneSegmentCompiler.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneSegment.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\Core\Public\UObject/SequencerObjectVersion.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSegment.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneTrack.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationTemplate.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneTrackIdentifier.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneTrackIdentifier.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationField.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationKey.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvaluationKey.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvaluationField.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationTrack.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieScenePlayback.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneSequenceTransform.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSequenceTransform.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvalTemplate.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvalTemplateBase.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvalTemplateBase.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneExecutionTokens.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneExecutionToken.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationScope.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/PersistentEvaluationData.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationOperand.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvaluationOperand.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneSequenceInstanceData.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSequenceInstanceData.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/MovieSceneBlendingAccumulator.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/BlendableToken.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/MovieSceneBlendingActuatorID.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/MovieSceneBlendingActuator.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\IMovieScenePlayer.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieScenePreAnimatedState.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\MovieSceneSpawnRegister.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\IMovieSceneObjectSpawner.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationState.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/BlendableTokenStack.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/MovieSceneInitialValueStore.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/Blending/MovieSceneAccumulatedBlendState.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation\Blending\MovieSceneBlendingAccumulator.inl
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Compilation/MovieSceneTemplateInterrogation.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvalTemplate.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneTrackImplementation.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneTrackImplementation.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneEvaluationTree.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvaluationTrack.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneSequenceHierarchy.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\MovieScene\Public\Evaluation/MovieSceneSectionParameters.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSectionParameters.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSequenceHierarchy.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneEvaluationTemplate.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSequence.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\UMG\Public\Animation/WidgetAnimationBinding.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetAnimationBinding.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetAnimation.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\UMG\Public\Blueprint/WidgetBlueprintGeneratedClass.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\UMG\Public\Binding/DynamicPropertyPath.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\PropertyPath\Public\PropertyPathHelpers.h
+D:\EpicGamesGames\UE_4.22\Engine\Source\Runtime\PropertyPath\Public\PropertyTypeCompatibility.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\PropertyPath\PropertyPathHelpers.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\DynamicPropertyPath.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetBlueprintGeneratedClass.generated.h
+D:\EpicGamesGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h

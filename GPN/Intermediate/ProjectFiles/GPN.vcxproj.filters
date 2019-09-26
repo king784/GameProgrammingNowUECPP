@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GPN.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A9C99E34-CB70-487A-9EEB-802C3F04993A}</UniqueIdentifier>
+      <UniqueIdentifier>{C718BF07-9A54-4F20-8617-91CC64B5881B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GPN.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{E7A97062-6391-41F0-8D39-BD30CC99B583}</UniqueIdentifier>
+      <UniqueIdentifier>{262257EA-0A1B-40E4-BF80-40B8D0494C64}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GPN">
-      <UniqueIdentifier>{D51A7465-48D1-437D-B753-136E1D36678F}</UniqueIdentifier>
+      <UniqueIdentifier>{DF116F50-9691-4EA5-A4A7-27A49366B060}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GPN\GPN.Build.cs">
       <Filter>Source\GPN</Filter>
@@ -60,6 +60,12 @@
       <Filter>Source\GPN</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GPN\MyPlayerCharacter.h">
+      <Filter>Source\GPN</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GPN\NotifyInterface.cpp">
+      <Filter>Source\GPN</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPN\NotifyInterface.h">
       <Filter>Source\GPN</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\GPN\Pickup.cpp">

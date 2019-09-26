@@ -4,6 +4,7 @@
 #include "MyPlayerCharacter.h"
 #include "InteractInterface.h"
 #include "LightSwitch.h"
+#include "NotifyInterface.h"
 #include "Blueprint/UserWidget.h"
 
 // Sets default values
@@ -103,6 +104,22 @@ void AMyPlayerCharacter::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp,
 void AMyPlayerCharacter::Die()
 {
 	IsDead = true;
+
+	// Notify about dead
+	TArray<AActor*> Interfaces;
+	UGameplayStatics::GetAllActorsWithInterface(this, UNotifyInterface::StaticClass(), Interfaces);
+	for (const auto& Actor : Interfaces) 
+	{
+
+		// Try to Execute on Blueprint layer:
+		const auto& Interface = Cast<INotifyInterface>(Actor);
+		if (!Interface) 
+		{ 
+			if (Actor->GetClass()->ImplementsInterface(UNotifyInterface::StaticClass())) {
+				INotifyInterface::Execute_NotifyDead(Actor, this);
+			}
+		}
+	}
 }
 
 // Called when the game starts or when spawned
@@ -111,11 +128,21 @@ void AMyPlayerCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	// Set camera to default pos
+
+	// FRotator rot(0.0f, CameraAngle, 0.0f);
+	// CameraOffset = rot.RotateVector(CameraOffset);
+	// 
+	// OurCamera->SetRelativeLocation(CameraOffset);
+	// 
+	// FRotator Rot = FRotationMatrix::MakeFromX(OurCamera->GetComponentLocation() - MyMesh->GetComponentLocation()).Rotator();
+	// Rot.Pitch = -9.0f;
+	// OurCamera->SetRelativeRotation(Rot);
+	
 	OurCamera->SetRelativeLocation(FVector(-700.0f, 0.0f, 450.0f));
 	OurCamera->SetRelativeRotation(FRotator(-20.0f, 0.0f, 0.0f));
 	CameraOffset = FVector(MyMesh->GetComponentLocation().X - 700.0f, MyMesh->GetComponentLocation().Y, MyMesh->GetComponentLocation().Z + 450.0f);
-	
-	// RotCamRightInput();
+	OurCamera->SetRelativeLocation(CameraOffset);
+	RotCamRightInput();
 
 	// Game UI
 	if (wGameUI)
@@ -251,6 +278,11 @@ void AMyPlayerCharacter::UpdateBatteryCharge(float newCharge)
 {
 	BatteryCharge += newCharge;
 	BatteryCharge = FMath::Clamp(BatteryCharge, 0.0f, 1.0f);
+	if (BatteryCharge <= 0.01f)
+	{
+		// Game over
+		Die();
+	}
 }
 
 void AMyPlayerCharacter::Interact()

@@ -10,6 +10,7 @@
 #include "Components/BoxComponent.h"
 #include "Components/ProgressBar.h"
 #include "Animation/AnimBlueprint.h"
+#include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 #include "ConstructorHelpers.h"
 #include "MyPlayerCharacter.generated.h"
 
