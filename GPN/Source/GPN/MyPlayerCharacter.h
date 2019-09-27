@@ -53,6 +53,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void Die();
 
+	UFUNCTION()
+		void AddCollectedBattery(int HowMany = 1);
+
 	// Mesh
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	USkeletalMeshComponent* MyMesh;
@@ -111,6 +114,9 @@ private:
 
 	bool CanInteract = false;
 	float BatteryCharge = 1.0f;
+
+	int CollectedBatteries = 0;
+	int VictoryBatteries = 30;
 
 	// Animation variables for controlling animation, Doing this in BP to avoid crash
 	// UAnimInstance* AnimInst;

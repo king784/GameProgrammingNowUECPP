@@ -71,6 +71,7 @@ void AMyPlayerCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AAc
 		theSwitch->ToggleInfo();
 	}
 	
+	/*
 	if(OtherName.Contains("BlockingVolume"))
 	{
 		FVector NewMoveVec = OtherActor->GetActorForwardVector(); // OtherActor->GetActorLocation() - GetActorLocation();
@@ -81,6 +82,7 @@ void AMyPlayerCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AAc
 		// NewMoveVec = NewMoveVec.Normalize(0.1f);
 		// NewMoveVec *= 100.0f;
 	}
+	*/
 	// Check if implements:  if(UKismetSystemLibrary::DoesImplementInterface(OtherActor,))
 }
 
@@ -114,13 +116,34 @@ void AMyPlayerCharacter::Die()
 	UGameplayStatics::GetAllActorsWithInterface(this, UNotifyInterface::StaticClass(), Interfaces);
 	for (const auto& Actor : Interfaces) 
 	{
-
 		// Try to Execute on Blueprint layer:
 		const auto& Interface = Cast<INotifyInterface>(Actor);
 		if (!Interface) 
 		{ 
 			if (Actor->GetClass()->ImplementsInterface(UNotifyInterface::StaticClass())) {
 				INotifyInterface::Execute_NotifyDead(Actor, this);
+			}
+		}
+	}
+}
+
+void AMyPlayerCharacter::AddCollectedBattery(int HowMany)
+{
+	CollectedBatteries += HowMany;
+	if (CollectedBatteries >= VictoryBatteries)
+	{
+		// Notify about victory
+		TArray<AActor*> Interfaces;
+		UGameplayStatics::GetAllActorsWithInterface(this, UNotifyInterface::StaticClass(), Interfaces);
+		for (const auto& Actor : Interfaces)
+		{
+			// Try to Execute on Blueprint layer:
+			const auto& Interface = Cast<INotifyInterface>(Actor);
+			if (!Interface)
+			{
+				if (Actor->GetClass()->ImplementsInterface(UNotifyInterface::StaticClass())) {
+					INotifyInterface::Execute_NotifyVictory(Actor, this);
+				}
 			}
 		}
 	}

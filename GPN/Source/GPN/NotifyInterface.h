@@ -25,4 +25,7 @@ class GPN_API INotifyInterface
 public:
 	UFUNCTION(BlueprintImplementableEvent)
 		void NotifyDead(const AMyPlayerCharacter* Context);
+
+	UFUNCTION(BlueprintImplementableEvent)
+		void NotifyVictory(const AMyPlayerCharacter* Context);
 };
