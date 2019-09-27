@@ -1,3 +1,3 @@
-D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN\GPN.Build.cs
-D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN.Target.cs
-D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPNEditor.Target.cs
+C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN\GPN.Build.cs
+C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN.Target.cs
+C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPNEditor.Target.cs

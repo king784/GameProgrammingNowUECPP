@@ -103,6 +103,10 @@ void AMyPlayerCharacter::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp,
 
 void AMyPlayerCharacter::Die()
 {
+	if (IsDead)
+	{
+		return;
+	}
 	IsDead = true;
 
 	// Notify about dead
@@ -138,11 +142,11 @@ void AMyPlayerCharacter::BeginPlay()
 	// Rot.Pitch = -9.0f;
 	// OurCamera->SetRelativeRotation(Rot);
 	
-	OurCamera->SetRelativeLocation(FVector(-700.0f, 0.0f, 450.0f));
+	//OurCamera->SetRelativeLocation(FVector(-350.0f, 0.0f, 225.0f));
 	OurCamera->SetRelativeRotation(FRotator(-20.0f, 0.0f, 0.0f));
-	CameraOffset = FVector(MyMesh->GetComponentLocation().X - 700.0f, MyMesh->GetComponentLocation().Y, MyMesh->GetComponentLocation().Z + 450.0f);
-	OurCamera->SetRelativeLocation(CameraOffset);
-	RotCamRightInput();
+	CameraOffset = FVector(-700.0f, 0.0f, 450.0f); // FVector(MyMesh->GetComponentLocation().X - 700.0f, MyMesh->GetComponentLocation().Y, MyMesh->GetComponentLocation().Z + 450.0f);
+	//OurCamera->SetRelativeLocation(CameraOffset);
+	RotCamLeftInput();
 
 	// Game UI
 	if (wGameUI)
@@ -171,6 +175,11 @@ void AMyPlayerCharacter::BeginPlay()
 void AMyPlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if (IsDead)
+	{
+		return;
+	}
 
 	UpdateBatteryCharge(-0.0005f);
 	//UE_LOG(LogTemp, Warning, TEXT("%f"), batteryCharge);
