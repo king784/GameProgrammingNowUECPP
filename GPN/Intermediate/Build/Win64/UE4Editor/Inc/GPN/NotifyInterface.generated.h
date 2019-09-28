@@ -20,6 +20,10 @@ class AMyPlayerCharacter;
 	struct NotifyInterface_eventNotifyDead_Parms \
 	{ \
 		const AMyPlayerCharacter* Context; \
+	}; \
+	struct NotifyInterface_eventNotifyVictory_Parms \
+	{ \
+		const AMyPlayerCharacter* Context; \
 	};
 
 
@@ -81,6 +85,7 @@ public: \
 	typedef UNotifyInterface UClassType; \
 	typedef INotifyInterface ThisClass; \
 	static void Execute_NotifyDead(UObject* O, const AMyPlayerCharacter* Context); \
+	static void Execute_NotifyVictory(UObject* O, const AMyPlayerCharacter* Context); \
 	virtual UObject* _getUObject() const { check(0 && "Missing required implementation."); return nullptr; }
 
 
@@ -91,6 +96,7 @@ public: \
 	typedef UNotifyInterface UClassType; \
 	typedef INotifyInterface ThisClass; \
 	static void Execute_NotifyDead(UObject* O, const AMyPlayerCharacter* Context); \
+	static void Execute_NotifyVictory(UObject* O, const AMyPlayerCharacter* Context); \
 	virtual UObject* _getUObject() const { check(0 && "Missing required implementation."); return nullptr; }
 
 

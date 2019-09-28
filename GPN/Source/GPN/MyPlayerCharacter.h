@@ -99,7 +99,10 @@ public:
 	FVector AnimationMoveSpeed;
 
 	UPROPERTY(BlueprintReadWrite)
-	bool IsDead;
+		bool IsDead = false;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool CanMove = true;
 
 private:
 	// Movement boundaries

@@ -208,7 +208,7 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 	//UE_LOG(LogTemp, Warning, TEXT("%f"), batteryCharge);
 
 	// Handle movement based on our "MoveX" and "MoveY" axes
-	if (!CurrentVelocity.IsZero())
+	if (!CurrentVelocity.IsZero() && CanMove)
 	{
 		// FVector MoveVec = OurCamera->GetForwardVector();
 		// FRotator rot(0.0f, CameraAngle, 0.0f);

@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 	GPN_API UClass* Z_Construct_UClass_AMyPlayerCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_GPN();
+	GPN_API UFunction* Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery();
 	GPN_API UFunction* Z_Construct_UFunction_AMyPlayerCharacter_Die();
 	GPN_API UFunction* Z_Construct_UFunction_AMyPlayerCharacter_OnOverlapBegin();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
@@ -35,11 +36,44 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 	{
 		UClass* Class = AMyPlayerCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "AddCollectedBattery", &AMyPlayerCharacter::execAddCollectedBattery },
 			{ "Die", &AMyPlayerCharacter::execDie },
 			{ "OnOverlapBegin", &AMyPlayerCharacter::execOnOverlapBegin },
 			{ "OnOverlapEnd", &AMyPlayerCharacter::execOnOverlapEnd },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery_Statics
+	{
+		struct MyPlayerCharacter_eventAddCollectedBattery_Parms
+		{
+			int32 HowMany;
+		};
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_HowMany;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery_Statics::NewProp_HowMany = { "HowMany", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPlayerCharacter_eventAddCollectedBattery_Parms, HowMany), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery_Statics::NewProp_HowMany,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyPlayerCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPlayerCharacter, nullptr, "AddCollectedBattery", sizeof(MyPlayerCharacter_eventAddCollectedBattery_Parms), Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AMyPlayerCharacter_Die_Statics
 	{
@@ -216,6 +250,11 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CanMove_MetaData[];
+#endif
+		static void NewProp_CanMove_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_CanMove;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsDead_MetaData[];
 #endif
 		static void NewProp_IsDead_SetBit(void* Obj);
@@ -270,6 +309,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_GPN,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMyPlayerCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AMyPlayerCharacter_AddCollectedBattery, "AddCollectedBattery" }, // 1981050483
 		{ &Z_Construct_UFunction_AMyPlayerCharacter_Die, "Die" }, // 1229935727
 		{ &Z_Construct_UFunction_AMyPlayerCharacter_OnOverlapBegin, "OnOverlapBegin" }, // 3426660524
 		{ &Z_Construct_UFunction_AMyPlayerCharacter_OnOverlapEnd, "OnOverlapEnd" }, // 148322794
@@ -282,6 +322,17 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_CanMove_MetaData[] = {
+		{ "Category", "MyPlayerCharacter" },
+		{ "ModuleRelativePath", "MyPlayerCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_CanMove_SetBit(void* Obj)
+	{
+		((AMyPlayerCharacter*)Obj)->CanMove = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_CanMove = { "CanMove", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AMyPlayerCharacter), &Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_CanMove_SetBit, METADATA_PARAMS(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_CanMove_MetaData, ARRAY_COUNT(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_CanMove_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_IsDead_MetaData[] = {
 		{ "Category", "MyPlayerCharacter" },
@@ -375,6 +426,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_OurCamera = { "OurCamera", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayerCharacter, OurCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_OurCamera_MetaData, ARRAY_COUNT(Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_OurCamera_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyPlayerCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_CanMove,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_IsDead,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_AnimationMoveSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayerCharacter_Statics::NewProp_CurrentVelocity,
@@ -414,7 +466,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyPlayerCharacter, 2500435589);
+	IMPLEMENT_CLASS(AMyPlayerCharacter, 3403808881);
 	template<> GPN_API UClass* StaticClass<AMyPlayerCharacter>()
 	{
 		return AMyPlayerCharacter::StaticClass();

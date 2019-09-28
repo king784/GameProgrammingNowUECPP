@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GPN.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{4CBD040E-BAAB-4F58-B34F-79ACB445F4AB}</UniqueIdentifier>
+      <UniqueIdentifier>{808986A3-BC3E-49AE-A813-4982604B5CCD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GPN.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{50128F6D-CC20-4CF2-A32B-BE33471649EF}</UniqueIdentifier>
+      <UniqueIdentifier>{ADF6EDCC-0564-4502-B6EE-474B2EF149F2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GPN">
-      <UniqueIdentifier>{EA31CC5A-B342-4C20-8F26-7C849F0D7B8A}</UniqueIdentifier>
+      <UniqueIdentifier>{48CACA4F-B0D9-427F-99F4-22F5B81E633E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GPN\GPN.Build.cs">
       <Filter>Source\GPN</Filter>

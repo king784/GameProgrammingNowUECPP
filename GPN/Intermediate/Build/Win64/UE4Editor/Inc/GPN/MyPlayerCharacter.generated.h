@@ -18,6 +18,15 @@ struct FHitResult;
 
 #define GPN_Source_GPN_MyPlayerCharacter_h_20_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execAddCollectedBattery) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_HowMany); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AddCollectedBattery(Z_Param_HowMany); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execDie) \
 	{ \
 		P_FINISH; \
@@ -54,6 +63,15 @@ struct FHitResult;
 
 
 #define GPN_Source_GPN_MyPlayerCharacter_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execAddCollectedBattery) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_HowMany); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AddCollectedBattery(Z_Param_HowMany); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execDie) \
 	{ \
