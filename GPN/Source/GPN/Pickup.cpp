@@ -24,6 +24,8 @@ APickup::APickup()
 	{
 		UStaticMesh* TheMeshAsset = StaticMeshAsset.Object;
 		Mesh->SetStaticMesh(TheMeshAsset);
+		Mesh->SetRenderCustomDepth(true);
+		Mesh->SetCustomDepthStencilValue(2);
 	}
 
 	// Particles

@@ -150,7 +150,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyPlayerCharacter); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMyPlayerCharacter)
 
 
-#define GPN_Source_GPN_MyPlayerCharacter_h_20_PRIVATE_PROPERTY_OFFSET
+#define GPN_Source_GPN_MyPlayerCharacter_h_20_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__CameraAngle() { return STRUCT_OFFSET(AMyPlayerCharacter, CameraAngle); }
+
+
 #define GPN_Source_GPN_MyPlayerCharacter_h_17_PROLOG
 #define GPN_Source_GPN_MyPlayerCharacter_h_20_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

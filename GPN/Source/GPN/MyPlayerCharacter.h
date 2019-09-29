@@ -111,6 +111,7 @@ private:
 	FVector LastLocation = FVector(0.0);
 	// Camera values
 	FVector CameraOffset;
+	UPROPERTY(EditAnywhere)
 	float CameraAngle = 1.0f;
 	bool RotLeft = false;
 	bool RotRight = false;
