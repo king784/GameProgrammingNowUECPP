@@ -426,21 +426,20 @@
 /I ThirdParty
 /I ThirdParty\libSampleRate\Public
 /I ThirdParty\libSampleRate
-/I D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN
-/I D:\Projects\GameProgrammingNowUECPP\GPN\Source
-/I D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN
-/I D:\VisualStudio2019\VC\Tools\MSVC\14.20.27508\INCLUDE
-/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"
-/FI"D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\GPNEditor\Development\Engine\SharedPCH.Engine.h"
-/Yu"D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\GPNEditor\Development\Engine\SharedPCH.Engine.h"
-/Fp"D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\GPNEditor\Development\Engine\SharedPCH.Engine.h.pch"
-"D:\Projects\GameProgrammingNowUECPP\GPN\Source\GPN\NotifyInterface.cpp"
-/FI"D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Definitions.GPN.h"
-/Fo"D:\Projects\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\NotifyInterface.cpp.obj"
+/I C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Inc\GPN
+/I C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source
+/I C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"
+/FI"C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\GPNEditor\Development\Engine\SharedPCH.Engine.h"
+/Yu"C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\GPNEditor\Development\Engine\SharedPCH.Engine.h"
+/Fp"C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\GPNEditor\Development\Engine\SharedPCH.Engine.h.pch"
+"C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Source\GPN\NotifyInterface.cpp"
+/FI"C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\Definitions.GPN.h"
+/Fo"C:\Users\teemu.turku\Documents\GitHub\GameProgrammingNowUECPP\GPN\Intermediate\Build\Win64\UE4Editor\Development\GPN\NotifyInterface.cpp.obj"
 /TP
 /GR-
 /W4

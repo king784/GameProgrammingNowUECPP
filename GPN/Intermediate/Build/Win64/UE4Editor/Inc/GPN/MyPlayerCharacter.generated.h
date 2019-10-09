@@ -16,7 +16,16 @@ struct FHitResult;
 #endif
 #define GPN_MyPlayerCharacter_generated_h
 
-#define GPN_Source_GPN_MyPlayerCharacter_h_20_RPC_WRAPPERS \
+#define GPN_Source_GPN_MyPlayerCharacter_h_21_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execUpdateBatteryCharge) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_newCharge); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->UpdateBatteryCharge(Z_Param_newCharge); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execAddCollectedBattery) \
 	{ \
@@ -62,7 +71,16 @@ struct FHitResult;
 	}
 
 
-#define GPN_Source_GPN_MyPlayerCharacter_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+#define GPN_Source_GPN_MyPlayerCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execUpdateBatteryCharge) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_newCharge); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->UpdateBatteryCharge(Z_Param_newCharge); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execAddCollectedBattery) \
 	{ \
@@ -108,7 +126,7 @@ struct FHitResult;
 	}
 
 
-#define GPN_Source_GPN_MyPlayerCharacter_h_20_INCLASS_NO_PURE_DECLS \
+#define GPN_Source_GPN_MyPlayerCharacter_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyPlayerCharacter(); \
 	friend struct Z_Construct_UClass_AMyPlayerCharacter_Statics; \
@@ -117,7 +135,7 @@ public: \
 	DECLARE_SERIALIZER(AMyPlayerCharacter)
 
 
-#define GPN_Source_GPN_MyPlayerCharacter_h_20_INCLASS \
+#define GPN_Source_GPN_MyPlayerCharacter_h_21_INCLASS \
 private: \
 	static void StaticRegisterNativesAMyPlayerCharacter(); \
 	friend struct Z_Construct_UClass_AMyPlayerCharacter_Statics; \
@@ -126,7 +144,7 @@ public: \
 	DECLARE_SERIALIZER(AMyPlayerCharacter)
 
 
-#define GPN_Source_GPN_MyPlayerCharacter_h_20_STANDARD_CONSTRUCTORS \
+#define GPN_Source_GPN_MyPlayerCharacter_h_21_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AMyPlayerCharacter(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMyPlayerCharacter) \
@@ -139,7 +157,7 @@ private: \
 public:
 
 
-#define GPN_Source_GPN_MyPlayerCharacter_h_20_ENHANCED_CONSTRUCTORS \
+#define GPN_Source_GPN_MyPlayerCharacter_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMyPlayerCharacter(AMyPlayerCharacter&&); \
@@ -150,29 +168,29 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyPlayerCharacter); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMyPlayerCharacter)
 
 
-#define GPN_Source_GPN_MyPlayerCharacter_h_20_PRIVATE_PROPERTY_OFFSET \
+#define GPN_Source_GPN_MyPlayerCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraAngle() { return STRUCT_OFFSET(AMyPlayerCharacter, CameraAngle); }
 
 
-#define GPN_Source_GPN_MyPlayerCharacter_h_17_PROLOG
-#define GPN_Source_GPN_MyPlayerCharacter_h_20_GENERATED_BODY_LEGACY \
+#define GPN_Source_GPN_MyPlayerCharacter_h_18_PROLOG
+#define GPN_Source_GPN_MyPlayerCharacter_h_21_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GPN_Source_GPN_MyPlayerCharacter_h_20_PRIVATE_PROPERTY_OFFSET \
-	GPN_Source_GPN_MyPlayerCharacter_h_20_RPC_WRAPPERS \
-	GPN_Source_GPN_MyPlayerCharacter_h_20_INCLASS \
-	GPN_Source_GPN_MyPlayerCharacter_h_20_STANDARD_CONSTRUCTORS \
+	GPN_Source_GPN_MyPlayerCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
+	GPN_Source_GPN_MyPlayerCharacter_h_21_RPC_WRAPPERS \
+	GPN_Source_GPN_MyPlayerCharacter_h_21_INCLASS \
+	GPN_Source_GPN_MyPlayerCharacter_h_21_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GPN_Source_GPN_MyPlayerCharacter_h_20_GENERATED_BODY \
+#define GPN_Source_GPN_MyPlayerCharacter_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GPN_Source_GPN_MyPlayerCharacter_h_20_PRIVATE_PROPERTY_OFFSET \
-	GPN_Source_GPN_MyPlayerCharacter_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
-	GPN_Source_GPN_MyPlayerCharacter_h_20_INCLASS_NO_PURE_DECLS \
-	GPN_Source_GPN_MyPlayerCharacter_h_20_ENHANCED_CONSTRUCTORS \
+	GPN_Source_GPN_MyPlayerCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
+	GPN_Source_GPN_MyPlayerCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	GPN_Source_GPN_MyPlayerCharacter_h_21_INCLASS_NO_PURE_DECLS \
+	GPN_Source_GPN_MyPlayerCharacter_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

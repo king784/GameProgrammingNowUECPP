@@ -11,6 +11,7 @@
 #include "Components/ProgressBar.h"
 #include "Animation/AnimBlueprint.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
+#include "Kismet/KismetMathLibrary.h"
 #include "ConstructorHelpers.h"
 #include "MyPlayerCharacter.generated.h"
 
@@ -71,6 +72,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UFUNCTION(BlueprintCallable, Category = "MyPlayer")
 	void UpdateBatteryCharge(float newCharge);
 
 	// Movement functions

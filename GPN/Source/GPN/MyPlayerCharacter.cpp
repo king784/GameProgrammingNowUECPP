@@ -224,7 +224,7 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 		ForwardVec = ForwardVec.RotateAngleAxis(-9.0f, OurCamera->GetRightVector());
 
 		// Needs some adjustement, because when 2 movement keys are pressed simultaneously, rotation is wrong
-		FRotator MeshRot(ForwardVec.GetSafeNormal().Rotation() + RightVec.GetSafeNormal().Rotation());
+		/*FRotator MeshRot(ForwardVec.GetSafeNormal().Rotation() + RightVec.GetSafeNormal().Rotation());
 		if (RightVec.Size() > 10.0f && ForwardVec.Size() > 10.0f)
 		{
 
@@ -232,9 +232,12 @@ void AMyPlayerCharacter::Tick(float DeltaTime)
 		else
 		{
 			MeshRot.Yaw -= 90.0f;
-		}
+		}*/
+
+		FRotator MeshRotation = UKismetMathLibrary::MakeRotFromX(ForwardVec.GetSafeNormal() + RightVec.GetSafeNormal());
+		MeshRotation.Yaw -= 90.0f;
 		
-		MyMesh->SetWorldRotation(MeshRot);
+		MyMesh->SetWorldRotation(MeshRotation);
 		
 		// FRotator RotForward(ForwardVec.GetSafeNormal().Rotation());
 		// RotForward.Pitch += 20.0f;

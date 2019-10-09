@@ -24,6 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	GPN_API UFunction* Z_Construct_UFunction_AMyPlayerCharacter_OnOverlapEnd();
+	GPN_API UFunction* Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
@@ -40,6 +41,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 			{ "Die", &AMyPlayerCharacter::execDie },
 			{ "OnOverlapBegin", &AMyPlayerCharacter::execOnOverlapBegin },
 			{ "OnOverlapEnd", &AMyPlayerCharacter::execOnOverlapEnd },
+			{ "UpdateBatteryCharge", &AMyPlayerCharacter::execUpdateBatteryCharge },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
 	}
@@ -238,6 +240,39 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge_Statics
+	{
+		struct MyPlayerCharacter_eventUpdateBatteryCharge_Parms
+		{
+			float newCharge;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_newCharge;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge_Statics::NewProp_newCharge = { "newCharge", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPlayerCharacter_eventUpdateBatteryCharge_Parms, newCharge), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge_Statics::NewProp_newCharge,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge_Statics::Function_MetaDataParams[] = {
+		{ "Category", "MyPlayer" },
+		{ "ModuleRelativePath", "MyPlayerCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPlayerCharacter, nullptr, "UpdateBatteryCharge", sizeof(MyPlayerCharacter_eventUpdateBatteryCharge_Parms), Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_AMyPlayerCharacter_NoRegister()
 	{
 		return AMyPlayerCharacter::StaticClass();
@@ -317,6 +352,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 		{ &Z_Construct_UFunction_AMyPlayerCharacter_Die, "Die" }, // 1229935727
 		{ &Z_Construct_UFunction_AMyPlayerCharacter_OnOverlapBegin, "OnOverlapBegin" }, // 3426660524
 		{ &Z_Construct_UFunction_AMyPlayerCharacter_OnOverlapEnd, "OnOverlapEnd" }, // 148322794
+		{ &Z_Construct_UFunction_AMyPlayerCharacter_UpdateBatteryCharge, "UpdateBatteryCharge" }, // 1204500995
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerCharacter_Statics::Class_MetaDataParams[] = {
@@ -478,7 +514,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyPlayerCharacter, 2661954981);
+	IMPLEMENT_CLASS(AMyPlayerCharacter, 3953432433);
 	template<> GPN_API UClass* StaticClass<AMyPlayerCharacter>()
 	{
 		return AMyPlayerCharacter::StaticClass();
