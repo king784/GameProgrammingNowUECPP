@@ -315,6 +315,11 @@ void AMyPlayerCharacter::UpdateBatteryCharge(float newCharge)
 	BatteryCharge = FMath::Clamp(BatteryCharge, 0.0f, 1.0f);
 	if (BatteryCharge <= 0.01f)
 	{
+		ChargeBar->SetPercent(0.0f);
+		float ReverseBatteryCharge = 1.0f - BatteryCharge;
+		FLinearColor NewCol(1.0f, 0.0f, 0.0f);
+		ChargeBar->SetFillColorAndOpacity(NewCol);
+
 		// Game over
 		Die();
 	}
